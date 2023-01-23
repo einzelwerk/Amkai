@@ -31,7 +31,7 @@
       </ul>
     </nav>
     <div class="header__btn-group"> 
-      <button class="header__btn btn btn--primary"><span class="btn__inner">Reservierung</span></button><a class="header__btn header__btn-link header__btn-link btn btn--secondary"><span class="btn__inner">Gutschein
+      <button class="header__btn btn btn--primary reservation"><span class="btn__inner">Reservierung</span></button><a class="header__btn header__btn-link header__btn-link btn btn--secondary"><span class="btn__inner">Gutschein
           <svg width="18" height="18">
             <use xlink:href="sprite.svg#card_sprite"></use>
           </svg></span></a>
@@ -66,7 +66,9 @@
     <div class="mobile-nav__bottom"> <a class="header__btn btn btn--secondary"><span class="btn__inner">Gutschein
           <svg width="18" height="18">
             <use xlink:href="sprite.svg#card_sprite"></use>
-          </svg></span></a></div>
+          </svg></span></a>
+      <buttom class="header__btn btn btn--primary reservation" type="submit"><span class="btn__inner">Reservieren</span></buttom>
+    </div>
   </div>
 </header>
     <main class="main">
@@ -186,10 +188,10 @@
         </div>
         <div class="main-form__checkbox checkbox">
           <label class="checkbox__label">
-            <input class="checkbox__input" type="checkbox"><span class="checkbox__fake"></span>
+            <input class="checkbox__input" id="main-form-checkbox" type="checkbox"><span class="checkbox__fake"></span>
           </label>
           <div class="checkbox__desc">
-            <label class="checkbox__label">
+            <label class="checkbox__label" for="main-form-checkbox">
               <p>Hiermit akzeptiere ich die</p>
             </label><a class="checkbox__link" href="">Datenschutzbedingungen</a>
           </div>
@@ -218,7 +220,7 @@
               <div class="checkbox__fake"></div>
             </label>
             <div class="checkbox__desc">
-              <label class="checkbox__label">
+              <label class="checkbox__label" for="cta-form-checkbox">
                 <p>Hiermit akzeptiere ich die</p>
               </label><a class="checkbox__link" href="">Datenschutzbedingungen</a>
             </div>
