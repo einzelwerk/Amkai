@@ -1,0 +1,50 @@
+@use '../utils/mixins' as *;
+
+.page-content {
+  max-width: 745px;
+
+  section {
+    margin-bottom: 100px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  h2 {
+    margin-bottom: 32px;
+    font-size: rem(40px);
+  }
+
+  ul {
+    li {
+      position: relative;
+
+      display: flex;
+
+      margin-bottom: 16px;
+
+      font-weight: 300;
+      line-height: 150%;
+
+      &::before {
+        content: '';
+
+        position: relative;
+        top: 8px;
+
+        display: block;
+
+        width: 12px;
+        height: 1px;
+        margin-right: 12px;
+
+        background: #606a71;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+header.header 
+  .header__inner 
+    .header__logo.logo 
+      a.logo__link(href="") 
+        img.logo__src(src=require('@/images/logo.svg'), alt="")
+    nav.header__nav.nav 
+      ul.nav__list 
+        li.nav__item 
+          a.nav__link(href="") Home
+        li.nav__item 
+          a.nav__link(href="") Restaurant
+        li.nav__item 
+          a.nav__link(href="") Speisekarte
+        li.nav__item 
+          a.nav__link(href="") Gutscheine
+        li.nav__item.nav__item--has-sub
+          a.nav__link(href="") Events
+          ul.nav__sub-menu.sub-menu 
+            li.sub-menu__item 
+              a.sub-menu__link(href="") Sub menu
+            li.sub-menu__item 
+              a.sub-menu__link(href="") Sub menu
+            li.sub-menu__item 
+              a.sub-menu__link(href="") Sub menu
+            li.sub-menu__item 
+              a.sub-menu__link(href="") Sub menu
+        li.nav__item 
+          a.nav__link(href="") Team
+        li.nav__item 
+          a.nav__link(href="") Kontakt
+        li.nav__item 
+          a.nav__link(href="") Jobs
+        li.nav__item 
+          a.nav__link(href="") Magazin
+    .header__btn-group 
+      button.header__btn.btn.btn--primary
+        span.btn__inner Reservierung
+      a.header__btn.header__btn-link.btn.btn--secondary
+        span.btn__inner Gutschein
+          svg(width="18" height="18")
+            use(xlink:href="sprite.svg#card_sprite") 

@@ -1,0 +1,55 @@
+
+section.container.section.section--s#vacancy-form
+  .vacancy-form 
+    .vacancy-form__col.vacancy-form__col--text
+      .vacancy-form__text-block
+        h4.vacancy-form__title Sind Sie noch auf der Suche nach
+          span  Ihrer perfekten Stelle?
+        p.vacancy-form__desc Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm.
+      .vacancy-form__recruiter.recruiter 
+        picture.recruiter__photo
+          img(src=require('@/images/req.jpg'), alt="")
+        .recruiter__info 
+          span.recruiter__name Alex Baldowin
+          span.recruiter__position Head HR
+      .vacancy-form__contacts.contacts-list 
+        .contacts-list__item
+          .contacts-list__icon
+            img(src=require('@/images/contacts/phone.svg'), alt="")
+          a.contacts-list__link(href="tel:040 380 377 30") 040 380 377 30 
+        .contacts-list__item
+          .contacts-list__icon
+            img(src=require('@/images/contacts/email.svg'), alt="")
+          a.contacts-list__link(href="mailto:jobs@amkai.hamburg") jobs@amkai.hamburg
+    .vacancy-form__col.vacancy-form__col--form 
+      form.main-form(action="")
+        .main-form__item 
+          input#main-form-name.main-form__input(type="text" placeholder=" ")
+          label.main-form__label(for="main-form-name") Vorname / Nachname
+        .main-form__item 
+          input#main-form-email.main-form__input(type="text" placeholder=" ")
+          label.main-form__label(for="main-form-email") E-Mail
+        .main-form__item 
+          input#main-form-phone.main-form__input(type="text" placeholder=" ")
+          label.main-form__label(for="main-form-phone") Telefon
+        .main-form__item 
+          input#main-form-file.main-form__input.main-form__input--file.js-attached-files(type="file"  multiple)
+          label.main-form__label-file(for="main-form-file")
+            span.main-form__label-file-text Lebenslauf hochladen
+            span.main-form__file-placeholder
+              svg.main-form__clip-icon(width="24" height="24")
+                use(xlink:href="sprite.svg#clip_sprite")
+          span.attached-files-area 
+            span.attached-files
+        .main-form__item.main-form__item--textarea
+          textarea#main-form-message.main-form__input(type="text" placeholder=" ")
+          label.main-form__label(for="main-form-message") Nachricht
+        .main-form__checkbox.checkbox
+          label.checkbox__label
+            input.checkbox__input(type="checkbox")
+            span.checkbox__fake
+            p Hiermit akzeptiere ich die
+          a.checkbox__link(href="") Datenschutzbedingungen
+        button.main-form__submit.btn.btn--white(type="submit")
+          span.btn__inner Jetzt bewerben
+

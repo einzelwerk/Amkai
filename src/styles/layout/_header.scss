@@ -1,0 +1,49 @@
+@use '../utils/vars' as *;
+@use '../utils/mixins' as *;
+
+.header {
+  position: absolute;
+  z-index: 1010;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  padding: 16px 40px;
+
+  transition: transform 0.5s;
+
+  &.fixed {
+    position: fixed;
+    background: var(--background);
+    animation: from-top 0.5s;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    margin-right: auto;
+    margin-left: 33px;
+  }
+
+  &__btn-group {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    flex: 1;
+
+    min-width: 140px;
+    margin-right: 12px;
+    padding-right: 0;
+    padding-left: 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@use '../utils/mixins' as *;
+
+.vacancy-form {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 120px;
+
+  padding: 60px;
+
+  background: var(--black-400);
+
+  &__title {
+    margin-bottom: 24px;
+    font-size: rem(40px);
+    line-height: 125%;
+
+    span {
+      color: var(--gold-color);
+    }
+  }
+
+  &__desc {
+    font-weight: 300;
+    line-height: 150%;
+  }
+
+  &__text-block {
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--black-300);
+  }
+
+  &__recruiter {
+    margin-top: 40px;
+  }
+
+  &__contacts {
+    margin-top: 24px;
+  }
+}
