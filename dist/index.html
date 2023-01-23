@@ -31,11 +31,42 @@
       </ul>
     </nav>
     <div class="header__btn-group"> 
-      <button class="header__btn btn btn--primary"><span class="btn__inner">Reservierung</span></button><a class="header__btn header__btn-link btn btn--secondary"><span class="btn__inner">Gutschein
+      <button class="header__btn btn btn--primary"><span class="btn__inner">Reservierung</span></button><a class="header__btn header__btn-link header__btn-link btn btn--secondary"><span class="btn__inner">Gutschein
           <svg width="18" height="18">
-            <use xlink:href="sprite.svg#card_sprite"> </use>
+            <use xlink:href="sprite.svg#card_sprite"></use>
           </svg></span></a>
     </div>
+    <div class="header__mobile-btn js-open-mobile-menu hidden-desktop">
+      <svg width="24" height="16">
+        <use xlink:href="sprite.svg#mobile_sprite"> </use>
+      </svg>
+    </div>
+  </div>
+  <div class="mobile-nav-wrapper" id="mobile-nav">
+    <nav class="header__mobile-nav mobile-nav container">
+      <ul class="mobile-nav__list"> 
+        <li class="mobile-nav__item"> <a class="mobile-nav__link" href="">Home</a></li>
+        <li class="mobile-nav__item"> <a class="mobile-nav__link" href="">Restaurant</a></li>
+        <li class="mobile-nav__item"> <a class="mobile-nav__link" href="">Speisekarte</a></li>
+        <li class="mobile-nav__item"> <a class="mobile-nav__link" href="">Gutscheine</a></li>
+        <li class="mobile-nav__item mobile-nav__item--has-sub"><a class="mobile-nav__link" href="">Events</a><span class="mobile-nav__arrow"> 
+            <svg width="16" height="16">
+              <use xlink:href="sprite.svg#caret_sprite"> </use>
+            </svg></span>
+          <ul class="mobile-sub">
+            <li class="mobile-sub__item"><a class="mobile-sub__link" href="">Separee</a></li>
+            <li class="mobile-sub__item"><a class="mobile-sub__link" href="">Glory lounge</a></li>
+            <li class="mobile-sub__item"><a class="mobile-sub__link" href="">Eventlocation</a></li>
+            <li class="mobile-sub__item"><a class="mobile-sub__link" href="">Gesamte Location</a></li>
+          </ul>
+        </li>
+        <li class="mobile-nav__item"> <a class="mobile-nav__link" href="">Gutscheine</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-nav__bottom"> <a class="header__btn btn btn--secondary"><span class="btn__inner">Gutschein
+          <svg width="18" height="18">
+            <use xlink:href="sprite.svg#card_sprite"></use>
+          </svg></span></a></div>
   </div>
 </header>
     <main class="main">
@@ -228,8 +259,12 @@
         <div class="main-form__checkbox checkbox">
           <label class="checkbox__label">
             <input class="checkbox__input" type="checkbox"><span class="checkbox__fake"></span>
-            <p>Hiermit akzeptiere ich die</p>
-          </label><a class="checkbox__link" href="">Datenschutzbedingungen</a>
+          </label>
+          <div class="checkbox__desc">
+            <label class="checkbox__label">
+              <p>Hiermit akzeptiere ich die</p>
+            </label><a class="checkbox__link" href="">Datenschutzbedingungen</a>
+          </div>
         </div>
         <button class="main-form__submit btn btn--white" type="submit"><span class="btn__inner">Jetzt bewerben</span></button>
       </form>
@@ -251,7 +286,9 @@
 <section class="cta-section section section--s">
   <div class="cta">
     <div class="cta__inner">
-      <picture class="cta__image"> <img src="assets/images/cta.png" alt=""></picture>
+      <picture class="cta__image"> 
+        <source media="(max-width:556px)" srcset="assets/images/cta-m.png"><img src="assets/images/cta.png" alt="">
+      </picture>
       <h4 class="cta__title">Abonnieren Sie den Newsletter</h4>
       <form class="cta__form cta-form" action="">
         <div class="cta-form__col">
@@ -261,9 +298,14 @@
           </div>
           <div class="cta-form__checkbox checkbox">
             <label class="checkbox__label" for="cta-form-checkbox"> 
-              <input class="checkbox__input" id="cta-form-checkbox" type="checkbox"><span class="checkbox__fake"></span>
-              <p>Hiermit akzeptiere ich die</p>
-            </label><a class="checkbox__link" href="">Datenschutzbedingungen</a>
+              <input class="checkbox__input" id="cta-form-checkbox" type="checkbox">
+              <div class="checkbox__fake"></div>
+            </label>
+            <div class="checkbox__desc">
+              <label class="checkbox__label">
+                <p>Hiermit akzeptiere ich die</p>
+              </label><a class="checkbox__link" href="">Datenschutzbedingungen</a>
+            </div>
           </div>
         </div>
         <button class="cta-form__submit btn btn--primary" type="submit">Abonnieren</button>
