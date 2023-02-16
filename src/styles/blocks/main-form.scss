@@ -86,6 +86,10 @@
   }
 
   &__submit {
+    @include media(md) {
+      width: 100%;
+    }
+
     margin-top: 32px;
     padding: 19px 37px;
   }
@@ -110,7 +114,9 @@
     border-radius: 8px;
   }
 
-  &__item-delete {
+  &__remove {
+    cursor: pointer;
+
     display: flex;
     align-items: center;
     justify-content: center;

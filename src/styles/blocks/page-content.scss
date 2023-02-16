@@ -4,6 +4,10 @@
   max-width: 745px;
 
   section {
+    @include media(md) {
+      margin-bottom: 60px;
+    }
+
     margin-bottom: 100px;
 
     &:last-child {
@@ -12,6 +16,10 @@
   }
 
   h2 {
+    @include media(md) {
+      font-size: rem(32px);
+    }
+
     margin-bottom: 32px;
     font-size: rem(40px);
   }

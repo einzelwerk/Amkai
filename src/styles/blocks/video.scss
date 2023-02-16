@@ -1,3 +1,5 @@
+@use '../utils/mixins' as *;
+
 .video {
   position: absolute;
   top: 0;
@@ -42,6 +44,10 @@
 }
 
 .video-section {
+  @include media(md) {
+    padding-bottom: calc(400px / 360px * 100%);
+  }
+
   position: relative;
   height: 0;
   padding-bottom: calc(700px / 1440px * 100%);

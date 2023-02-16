@@ -1,11 +1,19 @@
 @use '../utils/mixins' as *;
 
 .post-hero-section {
+  @include media(md) {
+    padding-top: 40px;
+  }
+
   margin-top: var(--header-height);
   padding-top: 80px;
 }
 
 .post-hero {
+  @include media(md) {
+    grid-template-columns: 1fr;
+  }
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
@@ -16,6 +24,10 @@
   }
 
   &__back {
+    @include media(md) {
+      margin-bottom: 40px;
+    }
+
     display: flex;
     align-items: center;
     margin-bottom: 60px;
@@ -31,6 +43,10 @@
   }
 
   &__title {
+    @include media(md) {
+      font-size: rem(40px);
+    }
+
     margin-bottom: 24px;
     font-size: rem(52px);
     font-weight: 500;
@@ -38,11 +54,21 @@
   }
 
   &__desc {
+    @include media(md) {
+      font-size: rem(18px);
+    }
+
     font-size: rem(20px);
     line-height: 150%;
   }
 
   &__button-group {
+    @include media(md) {
+      display: grid;
+      grid-template-columns: 1fr max-content;
+      margin-top: 40px;
+    }
+
     display: flex;
     align-items: center;
     margin-top: 48px;
@@ -50,6 +76,27 @@
 
   &__btn {
     margin-right: 12px;
+
+    svg {
+      margin-right: 12px;
+      margin-left: 0;
+    }
+
+    &:last-child {
+      @include media(md) {
+        .btn__inner {
+          svg {
+            margin: 0;
+          }
+
+          span {
+            display: none;
+          }
+        }
+      }
+
+      margin: 0;
+    }
   }
 
   &__image {

@@ -1,3 +1,5 @@
+@use '../utils/mixins' as *;
+
 .checkbox {
   cursor: pointer;
   display: flex;
@@ -13,8 +15,10 @@
     border: 1px solid var(--white-color);
   }
 
-  &__link {
-    margin-left: 5px;
+  &__desc {
+    p {
+      display: inline;
+    }
   }
 
   &__input {
@@ -41,10 +45,5 @@
         background-size: 11px;
       }
     }
-  }
-
-  &__label {
-    display: flex;
-    align-items: center;
   }
 }

@@ -12,8 +12,11 @@
   --header-top-gap: 0;
   @include media(lg) {
     --gap: 16px;
-    --gap-y: 60px;
+    --gap-y: 30px;
     --small-gap-y: 40px;
+    --gap-y-s: 30px;
+    --gap-y-m: 60px;
+    --gap-y-l: 30px;
   }
 }
 
@@ -26,6 +29,7 @@
   --black-200: #0c1921;
   --black-300: #22313b;
   --black-400: #16222a;
+  --black-500: #1b2932;
   --white-color: #fff;
 }
 

@@ -2,6 +2,7 @@ section.cta-section.section.section--s
   .cta
     .cta__inner
       picture.cta__image 
+        source(media="(max-width:556px)", srcset=require('@/images/cta-m.png'))
         img(src=require('@/images/cta.png'), alt="")
       h4.cta__title Abonnieren Sie den Newsletter
       form.cta__form.cta-form(action="")
@@ -12,8 +13,10 @@ section.cta-section.section.section--s
           .cta-form__checkbox.checkbox
             label.checkbox__label(for="cta-form-checkbox") 
               input#cta-form-checkbox.checkbox__input(type="checkbox")
-              span.checkbox__fake
-              p Hiermit akzeptiere ich die
-            a.checkbox__link(href="") Datenschutzbedingungen
+              .checkbox__fake
+            .checkbox__desc
+              label.checkbox__label(for='cta-form-checkbox')
+                p Hiermit akzeptiere ich die
+              a.checkbox__link(href="") Datenschutzbedingungen
         button.cta-form__submit.btn.btn--primary(type="submit") Abonnieren
 

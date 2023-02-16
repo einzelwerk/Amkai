@@ -1,3 +1,5 @@
+@use '../utils/mixins' as *;
+
 @keyframes from-top {
   0% {
     transform: translateY(-100%);

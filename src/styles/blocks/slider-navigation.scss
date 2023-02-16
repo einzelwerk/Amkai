@@ -1,0 +1,20 @@
+.slider-navigation {
+  display: flex;
+  align-items: center;
+
+  &__btn {
+    &--disabled {
+      opacity: 0.7;
+    }
+  }
+
+  &__pagination {
+    margin: 0 28px;
+  }
+}
+
+.slider-pagination {
+  .swiper-pagination-total {
+    opacity: 0.5;
+  }
+}

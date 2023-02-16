@@ -1,4 +1,4 @@
-set -e
+
 
 npm run build
 git add ./dist

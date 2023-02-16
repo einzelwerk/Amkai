@@ -34,6 +34,10 @@
   }
 
   &__item {
+    @include media(xl) {
+      margin-right: 1rem;
+    }
+
     margin-right: 24px;
     font-size: rem(14px);
 

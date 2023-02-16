@@ -5,6 +5,11 @@
   align-items: center;
 
   &__photo {
+    @include media(md) {
+      width: 48px;
+      height: 48px;
+    }
+
     overflow: hidden;
     width: 64px;
     height: 64px;
@@ -24,6 +29,10 @@
   }
 
   &__name {
+    @include media(md) {
+      margin-bottom: 4px;
+    }
+
     margin-bottom: 8px;
     font-size: rem(14px);
     font-weight: 500;

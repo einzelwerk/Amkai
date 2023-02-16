@@ -1,8 +1,39 @@
 section.section-hero 
   .hero
-    picture.hero__image 
-      img(src=require('@/images/hero/jobs.jpg'), alt="")
-    .container.hero__text-wrapper
-      .hero__text
-        h1.hero__title  Jobs mit guten Aussichten
-        h1.hero__desc  Auf zu neuen Ufern: Dein Arbeitsplatz direkt am Elbufer, mit offenem Blick auf den Hafen. Wir freuen uns auf deine Bewerbung!
+    if heroVideo
+      video.hero__video(src="https://amkai.hamburg/assets/userfiles/videos/amkai-teaser.mp4" autoplay muted loop) 
+    else
+      picture.hero__image 
+        img(src=require('@/images/hero/jobs.jpg'), alt="")
+    if heroIndex
+      .container.hero-index 
+        h1.hero-index__title am kai | seafood. drinks. elbblick
+        .hero-index__rating
+          .hero-rating   
+            span.hero-rating__star
+              img.hero-rating__icon(src=require('@/images/star.svg') , alt="")
+            span.hero-rating__star
+              img.hero-rating__icon(src=require('@/images/star.svg') , alt="")
+            span.hero-rating__star
+              img.hero-rating__icon(src=require('@/images/star.svg') , alt="")
+            span.hero-rating__star
+              img.hero-rating__icon(src=require('@/images/star.svg') , alt="")
+            span.hero-rating__star
+              img.hero-rating__icon(src=require('@/images/star-half.svg') , alt="")
+          span.hero-rating__text 4.5 / 5
+        .hero-index__button-group.button-group 
+          button.button-group__item.btn.btn--primary(type="button") 
+            span.btn__inner
+              svg(width="24" height="24")
+                use(xlink:href="sprite.svg#bell_sprite") 
+              span Speisekarte
+          button.button-group__item.btn.btn--gray(type="button") 
+            span.btn__inner
+              svg(width="24" height="24")
+                use(xlink:href="sprite.svg#play2_sprite") 
+              span Film
+    else
+      .container.hero__text-wrapper
+        .hero__text
+          h1.hero__title  Jobs mit guten Aussichten
+          h1.hero__desc  Auf zu neuen Ufern: Dein Arbeitsplatz direkt am Elbufer, mit offenem Blick auf den Hafen. Wir freuen uns auf deine Bewerbung!

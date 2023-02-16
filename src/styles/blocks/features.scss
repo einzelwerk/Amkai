@@ -1,6 +1,11 @@
 @use '../utils/mixins' as *;
 
 .features-block {
+  @include media(md) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
@@ -15,6 +20,11 @@
 }
 
 .features-grid {
+  @include media(md) {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px 30px;
@@ -51,6 +61,11 @@
 
 .features {
   &__title {
+    @include media(md) {
+      margin-bottom: 40px;
+      font-size: rem(32px);
+    }
+
     margin-bottom: 60px;
     font-size: rem(40px);
   }

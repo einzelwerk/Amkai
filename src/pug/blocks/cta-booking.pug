@@ -1,0 +1,17 @@
+section.section-booking 
+  .cta-booking 
+    picture.cta-booking__image 
+      img(src=require('@/images/cta-booking.jpg') , alt="")
+    .cta-booking__inner.container
+      .cta-booking__content 
+        h3.cta-booking__title Genießsen Sie einen Wunderschönen Abend bei am kai
+        p.cta-booking__desc Reservierungen nehmen wir gerne telefonisch oder über das nachfolgende Reservierungsformular entgegen.
+        .cta-booking__action-group 
+          button.cta-booking__btn.btn.btn--primary(type="button")
+            span.btn__inner zum Reservierungstool
+          a.cta-booking__mobile-btn.hidden-desktop(href="tel:")
+            svg(width="24" height="24")
+              use(xlink:href="sprite.svg#phone_sprite") 
+          .cta-booking__phone.cta-phone-col.hidden-mobile
+            h4.cta-phone-col__title   Telefonische Reservierungen:
+            a.cta-phone-col__link(href="") +49 040 380 377 30

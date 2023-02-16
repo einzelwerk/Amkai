@@ -1,10 +1,18 @@
 @use '../utils/mixins' as *;
 
 .cta {
+  @include media(lg) {
+    padding: 60px var(--gap);
+  }
+
   position: relative;
   padding: 100px 0;
 
   &__inner {
+    @include media(lg) {
+      grid-template-columns: 1fr;
+    }
+
     display: grid;
     grid-template-columns: 395px 1fr;
     gap: 95px;
@@ -32,6 +40,10 @@
   }
 
   &__title {
+    @include media(md) {
+      font-size: rem(32px);
+    }
+
     font-size: rem(40px);
     line-height: 125%;
     color: var(--gold-color);

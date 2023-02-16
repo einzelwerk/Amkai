@@ -32,9 +32,18 @@ section.container.section.section--s#vacancy-form
         .main-form__item 
           input#main-form-phone.main-form__input(type="text" placeholder=" ")
           label.main-form__label(for="main-form-phone") Telefon
-        .main-form__item 
-          input#main-form-file.main-form__input.main-form__input--file.js-attached-files(type="file"  multiple)
+        .main-form__item.main-form__item--file.js-attached-files
+          input#main-form-file.main-form__input.main-form__input--file(type="file"  multiple)
           label.main-form__label-file(for="main-form-file")
+            span.main-form__label-file-text Lebenslauf hochladen
+            span.main-form__file-placeholder
+              svg.main-form__clip-icon(width="24" height="24")
+                use(xlink:href="sprite.svg#clip_sprite")
+          span.attached-files-area 
+            span.attached-files
+        .main-form__item.main-form__item--file.js-attached-files
+          input#main-form-file-2.main-form__input.main-form__input--file(type="file"  multiple)
+          label.main-form__label-file(for="main-form-file-2")
             span.main-form__label-file-text Lebenslauf hochladen
             span.main-form__file-placeholder
               svg.main-form__clip-icon(width="24" height="24")
@@ -46,10 +55,12 @@ section.container.section.section--s#vacancy-form
           label.main-form__label(for="main-form-message") Nachricht
         .main-form__checkbox.checkbox
           label.checkbox__label
-            input.checkbox__input(type="checkbox")
+            input#main-form-checkbox.checkbox__input(type="checkbox")
             span.checkbox__fake
-            p Hiermit akzeptiere ich die
-          a.checkbox__link(href="") Datenschutzbedingungen
+          .checkbox__desc
+            label.checkbox__label(for="main-form-checkbox")
+              p Hiermit akzeptiere ich die
+            a.checkbox__link(href="") Datenschutzbedingungen
         button.main-form__submit.btn.btn--white(type="submit")
           span.btn__inner Jetzt bewerben
 
