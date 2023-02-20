@@ -39,7 +39,7 @@
 
     &:checked {
       ~ .checkbox__fake {
-        background: url(../assets/images/check.svg);
+        background: url('@/images/check.svg');
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 11px;

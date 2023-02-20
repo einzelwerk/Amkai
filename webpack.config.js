@@ -17,7 +17,6 @@ const isDev = !isProd;
 console.log(process.env.NODE_ENV);
 
 module.exports = {
-  mode: isDev,
   devtool: isDev ? 'source-map' : false,
   devServer: {
     static: {
@@ -34,7 +33,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@': path.join(__dirname, './src/assets/'),
+      '@': path.join(__dirname, './src/assets/theme/'),
     },
   },
   output: {
