@@ -1,7 +1,7 @@
 export default {
       id: "upload_sprite-usage",
       viewBox: "0 0 24 24",
-      url: __webpack_public_path__ + "C:\\Users\\user\\Desktop\\work\\amkai\\src\\assets\\icons\\upload_sprite.svg",
+      url: __webpack_public_path__ + "C:\\Users\\user\\Desktop\\work\\amkai\\src\\assets\\theme\\icons\\upload_sprite.svg",
       toString: function () {
         return this.url;
       }
