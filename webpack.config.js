@@ -38,10 +38,10 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'assets/[name].js',
+    filename: 'assets/theme/[name].js',
     assetModuleFilename: (pathData) => {
       const filepath = path.dirname(pathData.filename).split('/').slice(1).join('/');
-      return `${filepath}/[name][ext][query]`;
+      return `${filepath}/theme/[name][ext][query]`;
     },
   },
   plugins: [
@@ -58,7 +58,7 @@ module.exports = {
     new StylelintBarePlugin({}),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: 'assets/css/[name].css',
+      filename: 'assets/theme/css/[name].css',
     }),
     new webpack.HotModuleReplacementPlugin(),
     new SpriteLoaderPlugin({
