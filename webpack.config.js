@@ -41,7 +41,7 @@ module.exports = {
     filename: 'assets/theme/[name].js',
     assetModuleFilename: (pathData) => {
       const filepath = path.dirname(pathData.filename).split('/').slice(1).join('/');
-      return `${filepath}/theme/[name][ext][query]`;
+      return `${filepath}/[name][ext][query]`;
     },
   },
   plugins: [
