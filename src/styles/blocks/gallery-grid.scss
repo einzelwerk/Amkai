@@ -2,6 +2,7 @@
 
 .gallery-grid {
   @include media(md) {
+    grid-template-columns: 1fr 1fr;
     gap: 16px;
   }
 
@@ -10,54 +11,11 @@
   gap: 30px;
 
   &__item {
-    @include media(md) {
-      grid-column: span 2;
-    }
-
     grid-column: span 1;
 
-    &:nth-child(1) {
-      @include media(md) {
-        grid-column: span 4;
-        grid-row: auto;
-      }
-
+    &:first-child,
+    &:last-child {
       grid-column: span 2;
-      grid-row: span 2;
-    }
-
-    &:nth-child(2) {
-      @include media(md) {
-        grid-column: span 2;
-      }
-
-      grid-row: span 2;
-    }
-
-    &:nth-child(3) {
-      @include media(md) {
-        grid-column: span 2;
-      }
-    }
-
-    &:nth-child(4) {
-      @include media(md) {
-        grid-column: span 2;
-      }
-    }
-
-    &:nth-child(5) {
-      @include media(md) {
-        grid-column: span 4;
-      }
-
-      grid-column: span 2;
-    }
-
-    &:nth-child(7) {
-      @include media(md) {
-        order: 5;
-      }
     }
   }
 

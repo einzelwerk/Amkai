@@ -4,680 +4,695 @@ extends ../layouts/main
 block content
 
   include ../blocks/hero
-  .tabs-control.container(role='tablist')
-    .tabs-control__inner
-      button.tabs-control__item(type='button' role='tab' aria-selected='true' aria-controls='Dinnerkarte')
-        span.tabs-control__text Dinnerkarte
-      button.tabs-control__item(type='button' role='tab' aria-selected='true' aria-controls='Barkarte')
-        span.tabs-control__text Barkarte
-      button.tabs-control__item(type='button' role='tab' aria-selected='true' aria-controls='Weinkarte')
-        span.tabs-control__text Weinkarte
-  #Dinnerkarte.tabs-panel.container(role='tabpanel' tabindex='0' aria-labelledby='Dinnerkarte')
-    .menu
-      .menu-section 
-        h2.menu__title Aperitif
-        .menu__item 
-          picture.menu__image
-            img(src=require('@/images/menu/1.svg'), alt="")
-          .menu-list
-            each val in [1,1,1,1,1,1]
+  section.section-menu
+    .tabs-control.container(role='tablist')
+      .tabs-control__inner
+        button.tabs-control__item(type='button' role='tab' aria-selected='true' aria-controls='Dinnerkarte')
+          span.tabs-control__text Dinnerkarte
+        button.tabs-control__item(type='button' role='tab' aria-selected='true' aria-controls='Barkarte')
+          span.tabs-control__text Barkarte
+        button.tabs-control__item(type='button' role='tab' aria-selected='true' aria-controls='Weinkarte')
+          span.tabs-control__text Weinkarte
+    #Dinnerkarte.tabs-panel.container(role='tabpanel' tabindex='0' aria-labelledby='Dinnerkarte')
+      .menu
+        .menu-section 
+          h2.menu__title Aperitif
+          .menu__item 
+            picture.menu__image
+              img(src=require('@/images/menu/1.svg'), alt="")
+            .menu-list
+              each val in [1,1,1,1,1,1]
+                .menu-list__item
+                  .menu-list__tags 
+                    img(src=require('@/images/icons/v1.svg'), alt="")
+                    img(src=require('@/images/icons/v2.svg'), alt="")
+                  .menu-list__text
+                    .menu-list__heading 
+                      h3.menu-list__name  Yellowfin Tuna Tatar
+                      span.menu-list__line
+                      span.menu-list__price 14,-
+                    p.menu-list__ingredients
+                      span Tequila Mezcal
+                      span.menu-clarification , Mango
+                        span.menu-clarification__icon(aria-label="Zusätzliche anzeigen Information")
+                          svg(width="18" height="18")
+                            use(xlink:href="sprite.svg#question_sprite") 
+                          span.menu-clarification__toolbox Fermented korean spice paste
+                      span , Lime
+                      span , Tajin
+        .menu-section 
+          h2.menu__title Sparkling & Wine
+          .menu__item 
+            picture.menu__image
+              img(src=require('@/images/menu/2.svg'), alt="")
+            .menu-list
               .menu-list__item
                 .menu-list__tags 
                   img(src=require('@/images/icons/v1.svg'), alt="")
                   img(src=require('@/images/icons/v2.svg'), alt="")
                 .menu-list__text
                   .menu-list__heading 
-                    h3.menu-list__name  Yellowfin Tuna Tatar
+                    h3.menu-list__name  Cremant De Loire Michel Laurent
                     span.menu-list__line
-                    span.menu-list__price 14,-
+                    span.menu-list__price 9,-
                   p.menu-list__ingredients
-                    span Tequila Mezcal
-                    span.menu-clarification , Mango
-                      span.menu-clarification__icon(aria-label="Zusätzliche anzeigen Information")
-                        svg(width="18" height="18")
-                          use(xlink:href="sprite.svg#question_sprite") 
-                        span.menu-clarification__toolbox Fermented korean spice paste
-                    span , Lime
-                    span , Tajin
-      .menu-section 
-        h2.menu__title Sparkling & Wine
-        .menu__item 
-          picture.menu__image
-            img(src=require('@/images/menu/2.svg'), alt="")
-          .menu-list
-            .menu-list__item
-              .menu-list__tags 
-                img(src=require('@/images/icons/v1.svg'), alt="")
-                img(src=require('@/images/icons/v2.svg'), alt="")
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Cremant De Loire Michel Laurent
-                  span.menu-list__line
-                  span.menu-list__price 9,-
-                p.menu-list__ingredients
-                  span 0,1 / Brut
-            .menu-list__item
-              .menu-list__tags 
-                img(src=require('@/images/icons/v1.svg'), alt="")
-                img(src=require('@/images/icons/v2.svg'), alt="")
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Marques De Alvarez Reserva Tempranillo
-                  span.menu-list__line
-                  span.menu-list__price 8.5,-
-                p.menu-list__ingredients
-                  span 0,15 / Spain
-            .menu-list__item
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Seafood Pasta
-                  span.menu-list__line
-                  span.menu-list__price 34,- per person
-                p.menu-list__ingredients
-                  span Edamame
-                  span /  Gochujang 
-                  span / Lemon
-                  span  / Wakame
-            .menu-list__item
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Champagne Veuve Duroy
-                  span.menu-list__line
-                  span.menu-list__price 13.5,-
-                p.menu-list__ingredients
-                  span 0,1 / Brut Reserve
-            .menu-list__item
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Helde Weissburgunder
-                  span.menu-list__line
-                  span.menu-list__price 10,-
-                p.menu-list__ingredients
-                  span 0,15 / Baden
-            .menu-list__item
-              .menu-list__tags 
-                img(src=require('@/images/icons/v1.svg'), alt="")
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Bread
-                  span.menu-list__line
-                  span.menu-list__price 5.5,-
-                p.menu-list__ingredients
-                  span Nori Butter, Extra Vergine, Olive Oil, Sea Salt
-      .menu-section 
-        h2.menu__title Cold & Hot Starters
-        .menu__item 
-          picture.menu__image
-            img(src=require('@/images/menu/3.svg'), alt="")
-          .menu-list
-            .menu-list__item
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Yellowfin Tuna Tatar
-                  span.menu-list__line
-                  span.menu-list__price 20,-
-                p.menu-list__ingredients
-                  span Ginger 
-                  span  / Coriander
-                  span / Apple 
-                  span  / Kimchi 
-                  span / Chili
-            .menu-list__item
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Scallop Ceviche
-                  span.menu-list__line
-                  span.menu-list__price 22,-
-                p.menu-list__ingredients
-                  span Mango 
-                  span / Coriander 
-                  span / Early leek 
-                  span  / Thai Curry 
-                  span  / Kimchi Sesame 
-                  span / Yuzu Pearls
-            .menu-list__item
-              .menu-list__tags 
-                img(src=require('@/images/icons/v1.svg'), alt="")
-                img(src=require('@/images/icons/v2.svg'), alt="")
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Letuce
-                  span.menu-list__line
-                  span.menu-list__price 22,-
-                p.menu-list__ingredients
-                  span Carrots
-                  span  / Pray 
-                  span / Pear 
-                  span / Pomegranate
-            .menu-list__item
-              .menu-list__tags 
-                img(src=require('@/images/icons/v1.svg'), alt="")
-                img(src=require('@/images/icons/v2.svg'), alt="")
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Letuce
-                  span.menu-list__line
-                  span.menu-list__price 22,-
-                p.menu-list__ingredients
-                  span Carrots
-                  span  / Pray 
-                  span / Pear 
-                  span / Pomegranate
-            .menu-list__item
-              .menu-list__tags 
-                img(src=require('@/images/icons/v1.svg'), alt="")
-                img(src=require('@/images/icons/v2.svg'), alt="")
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Letuce
-                  span.menu-list__line
-                  span.menu-list__price 22,-
-                p.menu-list__ingredients
-                  span Carrots
-                  span  / Pray 
-                  span / Pear 
-                  span / Pomegranate
-            .menu-list__item
-              .menu-list__tags 
-                img(src=require('@/images/icons/v1.svg'), alt="")
-                img(src=require('@/images/icons/v2.svg'), alt="")
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Letuce
-                  span.menu-list__line
-                  span.menu-list__price 22,-
-                p.menu-list__ingredients
-                  span Carrots
-                  span  / Pray 
-                  span / Pear 
-                  span / Pomegranate
-            .menu-list__item
-
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Letuce
-                  span.menu-list__line
-                  span.menu-list__price 22,-
-                p.menu-list__ingredients
-                  span Carrots
-                  span  / Pray 
-                  span / Pear 
-                  span / Pomegranate
-            .menu-list__item
-              .menu-list__tags 
-                img(src=require('@/images/icons/v1.svg'), alt="")
-                img(src=require('@/images/icons/v2.svg'), alt="")
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Letuce
-                  span.menu-list__line
-                  span.menu-list__price 22,-
-                p.menu-list__ingredients
-                  span Carrots
-                  span  / Pray 
-                  span / Pear 
-                  span / Pomegranate
-            .menu-list__item
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Oyster Geay Special No. 1 Natural
-                p.menu-list__ingredients
-                  span Carrots
-                  span  / Pray 
-                  span / Pear 
-                  span / Pomegranate
-                .menu-variations.menu-list__variations
-                  .menu-variations__item 
-                    span.menu-variations__value 6 pcs.
-                    span.menu-variations__line 
-                    span.menu-variations__price 34,-
-                  .menu-variations__item 
-                    span.menu-variations__value 12 pcs.
-                    span.menu-variations__line 
-                    span.menu-variations__price 66,-
-  #Barkarte.tabs-panel.container(role='tabpanel' tabindex='0' aria-labelledby='Barkarte')
-    .menu
-      .menu-section 
-        h2.menu__title Aperitif 2
-        .menu__item 
-          picture.menu__image
-            img(src=require('@/images/menu/1.svg'), alt="")
-          .menu-list
-            each val in [1,1,1,1,1,1]
+                    span 0,1 / Brut
               .menu-list__item
                 .menu-list__tags 
                   img(src=require('@/images/icons/v1.svg'), alt="")
                   img(src=require('@/images/icons/v2.svg'), alt="")
                 .menu-list__text
                   .menu-list__heading 
+                    h3.menu-list__name  Marques De Alvarez Reserva Tempranillo
+                    span.menu-list__line
+                    span.menu-list__price 8.5,-
+                  p.menu-list__ingredients
+                    span 0,15 / Spain
+              .menu-list__item
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Seafood Pasta
+                    span.menu-list__line
+                    span.menu-list__price 34,- per person
+                  p.menu-list__ingredients
+                    span Edamame
+                    span /  Gochujang 
+                    span / Lemon
+                    span  / Wakame
+              .menu-list__item
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Champagne Veuve Duroy
+                    span.menu-list__line
+                    span.menu-list__price 13.5,-
+                  p.menu-list__ingredients
+                    span 0,1 / Brut Reserve
+              .menu-list__item
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Helde Weissburgunder
+                    span.menu-list__line
+                    span.menu-list__price 10,-
+                  p.menu-list__ingredients
+                    span 0,15 / Baden
+              .menu-list__item
+                .menu-list__tags 
+                  img(src=require('@/images/icons/v1.svg'), alt="")
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Bread
+                    span.menu-list__line
+                    span.menu-list__price 5.5,-
+                  p.menu-list__ingredients
+                    span Nori Butter, Extra Vergine, Olive Oil, Sea Salt
+        .menu-section 
+          h2.menu__title Cold & Hot Starters
+          .menu__item 
+            picture.menu__image
+              img(src=require('@/images/menu/3.svg'), alt="")
+            .menu-list
+              .menu-list__item
+                .menu-list__text
+                  .menu-list__heading 
                     h3.menu-list__name  Yellowfin Tuna Tatar
                     span.menu-list__line
-                    span.menu-list__price 14,-
+                    span.menu-list__price 20,-
                   p.menu-list__ingredients
-                    span Tequila Mezcal
-                    span.menu-clarification , Mango
-                      span.menu-clarification__icon(aria-label="Zusätzliche anzeigen Information")
-                        svg(width="18" height="18")
-                          use(xlink:href="sprite.svg#question_sprite") 
-                        span.menu-clarification__toolbox Fermented korean spice paste
-                    span , Lime
-                    span , Tajin
-      .menu-section 
-        h2.menu__title Sparkling & Wine
-        .menu__item 
-          picture.menu__image
-            img(src=require('@/images/menu/2.svg'), alt="")
-          .menu-list
-            .menu-list__item
-              .menu-list__tags 
-                img(src=require('@/images/icons/v1.svg'), alt="")
-                img(src=require('@/images/icons/v2.svg'), alt="")
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Cremant De Loire Michel Laurent
-                  span.menu-list__line
-                  span.menu-list__price 9,-
-                p.menu-list__ingredients
-                  span 0,1 / Brut
-            .menu-list__item
-              .menu-list__tags 
-                img(src=require('@/images/icons/v1.svg'), alt="")
-                img(src=require('@/images/icons/v2.svg'), alt="")
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Marques De Alvarez Reserva Tempranillo
-                  span.menu-list__line
-                  span.menu-list__price 8.5,-
-                p.menu-list__ingredients
-                  span 0,15 / Spain
-            .menu-list__item
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Seafood Pasta
-                  span.menu-list__line
-                  span.menu-list__price 34,- per person
-                p.menu-list__ingredients
-                  span Edamame
-                  span /  Gochujang 
-                  span / Lemon
-                  span  / Wakame
-            .menu-list__item
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Champagne Veuve Duroy
-                  span.menu-list__line
-                  span.menu-list__price 13.5,-
-                p.menu-list__ingredients
-                  span 0,1 / Brut Reserve
-            .menu-list__item
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Helde Weissburgunder
-                  span.menu-list__line
-                  span.menu-list__price 10,-
-                p.menu-list__ingredients
-                  span 0,15 / Baden
-            .menu-list__item
-              .menu-list__tags 
-                img(src=require('@/images/icons/v1.svg'), alt="")
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Bread
-                  span.menu-list__line
-                  span.menu-list__price 5.5,-
-                p.menu-list__ingredients
-                  span Nori Butter, Extra Vergine, Olive Oil, Sea Salt
-      .menu-section 
-        h2.menu__title Cold & Hot Starters
-        .menu__item 
-          picture.menu__image
-            img(src=require('@/images/menu/3.svg'), alt="")
-          .menu-list
-            .menu-list__item
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Yellowfin Tuna Tatar
-                  span.menu-list__line
-                  span.menu-list__price 20,-
-                p.menu-list__ingredients
-                  span Ginger 
-                  span  / Coriander
-                  span / Apple 
-                  span  / Kimchi 
-                  span / Chili
-            .menu-list__item
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Scallop Ceviche
-                  span.menu-list__line
-                  span.menu-list__price 22,-
-                p.menu-list__ingredients
-                  span Mango 
-                  span / Coriander 
-                  span / Early leek 
-                  span  / Thai Curry 
-                  span  / Kimchi Sesame 
-                  span / Yuzu Pearls
-            .menu-list__item
-              .menu-list__tags 
-                img(src=require('@/images/icons/v1.svg'), alt="")
-                img(src=require('@/images/icons/v2.svg'), alt="")
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Letuce
-                  span.menu-list__line
-                  span.menu-list__price 22,-
-                p.menu-list__ingredients
-                  span Carrots
-                  span  / Pray 
-                  span / Pear 
-                  span / Pomegranate
-            .menu-list__item
-              .menu-list__tags 
-                img(src=require('@/images/icons/v1.svg'), alt="")
-                img(src=require('@/images/icons/v2.svg'), alt="")
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Letuce
-                  span.menu-list__line
-                  span.menu-list__price 22,-
-                p.menu-list__ingredients
-                  span Carrots
-                  span  / Pray 
-                  span / Pear 
-                  span / Pomegranate
-            .menu-list__item
-              .menu-list__tags 
-                img(src=require('@/images/icons/v1.svg'), alt="")
-                img(src=require('@/images/icons/v2.svg'), alt="")
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Letuce
-                  span.menu-list__line
-                  span.menu-list__price 22,-
-                p.menu-list__ingredients
-                  span Carrots
-                  span  / Pray 
-                  span / Pear 
-                  span / Pomegranate
-            .menu-list__item
-              .menu-list__tags 
-                img(src=require('@/images/icons/v1.svg'), alt="")
-                img(src=require('@/images/icons/v2.svg'), alt="")
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Letuce
-                  span.menu-list__line
-                  span.menu-list__price 22,-
-                p.menu-list__ingredients
-                  span Carrots
-                  span  / Pray 
-                  span / Pear 
-                  span / Pomegranate
-            .menu-list__item
-
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Letuce
-                  span.menu-list__line
-                  span.menu-list__price 22,-
-                p.menu-list__ingredients
-                  span Carrots
-                  span  / Pray 
-                  span / Pear 
-                  span / Pomegranate
-            .menu-list__item
-              .menu-list__tags 
-                img(src=require('@/images/icons/v1.svg'), alt="")
-                img(src=require('@/images/icons/v2.svg'), alt="")
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Letuce
-                  span.menu-list__line
-                  span.menu-list__price 22,-
-                p.menu-list__ingredients
-                  span Carrots
-                  span  / Pray 
-                  span / Pear 
-                  span / Pomegranate
-            .menu-list__item
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Oyster Geay Special No. 1 Natural
-                p.menu-list__ingredients
-                  span Carrots
-                  span  / Pray 
-                  span / Pear 
-                  span / Pomegranate
-                .menu-variations.menu-list__variations
-                  .menu-variations__item 
-                    span.menu-variations__value 6 pcs.
-                    span.menu-variations__line 
-                    span.menu-variations__price 34,-
-                  .menu-variations__item 
-                    span.menu-variations__value 12 pcs.
-                    span.menu-variations__line 
-                    span.menu-variations__price 66,- 
-  #Weinkarte.tabs-panel.container(role='tabpanel' tabindex='0' aria-labelledby='Weinkarte')
-    .menu
-      .menu-section 
-        h2.menu__title Aperitif 3
-        .menu__item 
-          picture.menu__image
-            img(src=require('@/images/menu/1.svg'), alt="")
-          .menu-list
-            each val in [1,1,1,1,1,1]
+                    span Ginger 
+                    span  / Coriander
+                    span / Apple 
+                    span  / Kimchi 
+                    span / Chili
+              .menu-list__item
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Scallop Ceviche
+                    span.menu-list__line
+                    span.menu-list__price 22,-
+                  p.menu-list__ingredients
+                    span Mango 
+                    span / Coriander 
+                    span / Early leek 
+                    span  / Thai Curry 
+                    span  / Kimchi Sesame 
+                    span / Yuzu Pearls
               .menu-list__item
                 .menu-list__tags 
                   img(src=require('@/images/icons/v1.svg'), alt="")
                   img(src=require('@/images/icons/v2.svg'), alt="")
                 .menu-list__text
                   .menu-list__heading 
+                    h3.menu-list__name  Letuce
+                    span.menu-list__line
+                    span.menu-list__price 22,-
+                  p.menu-list__ingredients
+                    span Carrots
+                    span  / Pray 
+                    span / Pear 
+                    span / Pomegranate
+              .menu-list__item
+                .menu-list__tags 
+                  img(src=require('@/images/icons/v1.svg'), alt="")
+                  img(src=require('@/images/icons/v2.svg'), alt="")
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Letuce
+                    span.menu-list__line
+                    span.menu-list__price 22,-
+                  p.menu-list__ingredients
+                    span Carrots
+                    span  / Pray 
+                    span / Pear 
+                    span / Pomegranate
+              .menu-list__item
+                .menu-list__tags 
+                  img(src=require('@/images/icons/v1.svg'), alt="")
+                  img(src=require('@/images/icons/v2.svg'), alt="")
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Letuce
+                    span.menu-list__line
+                    span.menu-list__price 22,-
+                  p.menu-list__ingredients
+                    span Carrots
+                    span  / Pray 
+                    span / Pear 
+                    span / Pomegranate
+              .menu-list__item
+                .menu-list__tags 
+                  img(src=require('@/images/icons/v1.svg'), alt="")
+                  img(src=require('@/images/icons/v2.svg'), alt="")
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Letuce
+                    span.menu-list__line
+                    span.menu-list__price 22,-
+                  p.menu-list__ingredients
+                    span Carrots
+                    span  / Pray 
+                    span / Pear 
+                    span / Pomegranate
+              .menu-list__item
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Letuce
+                    span.menu-list__line
+                    span.menu-list__price 22,-
+                  p.menu-list__ingredients
+                    span Carrots
+                    span  / Pray 
+                    span / Pear 
+                    span / Pomegranate
+              .menu-list__item
+                .menu-list__tags 
+                  img(src=require('@/images/icons/v1.svg'), alt="")
+                  img(src=require('@/images/icons/v2.svg'), alt="")
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Letuce
+                    span.menu-list__line
+                    span.menu-list__price 22,-
+                  p.menu-list__ingredients
+                    span Carrots
+                    span  / Pray 
+                    span / Pear 
+                    span / Pomegranate
+              .menu-list__item
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Oyster Geay Special No. 1 Natural
+                  p.menu-list__ingredients
+                    span Carrots
+                    span  / Pray 
+                    span / Pear 
+                    span / Pomegranate
+                  .menu-variations.menu-list__variations
+                    .menu-variations__item 
+                      span.menu-variations__value 6 pcs.
+                      span.menu-variations__line 
+                      span.menu-variations__price 34,-
+                    .menu-variations__item 
+                      span.menu-variations__value 12 pcs.
+                      span.menu-variations__line 
+                      span.menu-variations__price 66,-
+      .menu-pdf 
+        .menu-pdf__inner.container
+          h4.menu-pdf__title Herunterladen PDF:
+          .menu-pdf__links
+            a.menu-pdf__item(href="") 
+              span English
+              svg(width="24" height="24")
+                use(xlink:href="sprite.svg#download_sprite") 
+            a.menu-pdf__item(href="") 
+              span Deutsch
+              svg(width="24" height="24")
+                use(xlink:href="sprite.svg#download_sprite") 
+    #Barkarte.tabs-panel.container(role='tabpanel' tabindex='0' aria-labelledby='Barkarte')
+      .menu
+        .menu-section 
+          h2.menu__title Aperitif 2
+          .menu__item 
+            picture.menu__image
+              img(src=require('@/images/menu/1.svg'), alt="")
+            .menu-list
+              each val in [1,1,1,1,1,1]
+                .menu-list__item
+                  .menu-list__tags 
+                    img(src=require('@/images/icons/v1.svg'), alt="")
+                    img(src=require('@/images/icons/v2.svg'), alt="")
+                  .menu-list__text
+                    .menu-list__heading 
+                      h3.menu-list__name  Yellowfin Tuna Tatar
+                      span.menu-list__line
+                      span.menu-list__price 14,-
+                    p.menu-list__ingredients
+                      span Tequila Mezcal
+                      span.menu-clarification , Mango
+                        span.menu-clarification__icon(aria-label="Zusätzliche anzeigen Information")
+                          svg(width="18" height="18")
+                            use(xlink:href="sprite.svg#question_sprite") 
+                          span.menu-clarification__toolbox Fermented korean spice paste
+                      span , Lime
+                      span , Tajin
+        .menu-section 
+          h2.menu__title Sparkling & Wine
+          .menu__item 
+            picture.menu__image
+              img(src=require('@/images/menu/2.svg'), alt="")
+            .menu-list
+              .menu-list__item
+                .menu-list__tags 
+                  img(src=require('@/images/icons/v1.svg'), alt="")
+                  img(src=require('@/images/icons/v2.svg'), alt="")
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Cremant De Loire Michel Laurent
+                    span.menu-list__line
+                    span.menu-list__price 9,-
+                  p.menu-list__ingredients
+                    span 0,1 / Brut
+              .menu-list__item
+                .menu-list__tags 
+                  img(src=require('@/images/icons/v1.svg'), alt="")
+                  img(src=require('@/images/icons/v2.svg'), alt="")
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Marques De Alvarez Reserva Tempranillo
+                    span.menu-list__line
+                    span.menu-list__price 8.5,-
+                  p.menu-list__ingredients
+                    span 0,15 / Spain
+              .menu-list__item
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Seafood Pasta
+                    span.menu-list__line
+                    span.menu-list__price 34,- per person
+                  p.menu-list__ingredients
+                    span Edamame
+                    span /  Gochujang 
+                    span / Lemon
+                    span  / Wakame
+              .menu-list__item
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Champagne Veuve Duroy
+                    span.menu-list__line
+                    span.menu-list__price 13.5,-
+                  p.menu-list__ingredients
+                    span 0,1 / Brut Reserve
+              .menu-list__item
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Helde Weissburgunder
+                    span.menu-list__line
+                    span.menu-list__price 10,-
+                  p.menu-list__ingredients
+                    span 0,15 / Baden
+              .menu-list__item
+                .menu-list__tags 
+                  img(src=require('@/images/icons/v1.svg'), alt="")
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Bread
+                    span.menu-list__line
+                    span.menu-list__price 5.5,-
+                  p.menu-list__ingredients
+                    span Nori Butter, Extra Vergine, Olive Oil, Sea Salt
+        .menu-section 
+          h2.menu__title Cold & Hot Starters
+          .menu__item 
+            picture.menu__image
+              img(src=require('@/images/menu/3.svg'), alt="")
+            .menu-list
+              .menu-list__item
+                .menu-list__text
+                  .menu-list__heading 
                     h3.menu-list__name  Yellowfin Tuna Tatar
                     span.menu-list__line
-                    span.menu-list__price 14,-
+                    span.menu-list__price 20,-
                   p.menu-list__ingredients
-                    span Tequila Mezcal
-                    span.menu-clarification , Mango
-                      span.menu-clarification__icon(aria-label="Zusätzliche anzeigen Information")
-                        svg(width="18" height="18")
-                          use(xlink:href="sprite.svg#question_sprite") 
-                        span.menu-clarification__toolbox Fermented korean spice paste
-                    span , Lime
-                    span , Tajin
-      .menu-section 
-        h2.menu__title Sparkling & Wine
-        .menu__item 
-          picture.menu__image
-            img(src=require('@/images/menu/2.svg'), alt="")
-          .menu-list
-            .menu-list__item
-              .menu-list__tags 
-                img(src=require('@/images/icons/v1.svg'), alt="")
-                img(src=require('@/images/icons/v2.svg'), alt="")
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Cremant De Loire Michel Laurent
-                  span.menu-list__line
-                  span.menu-list__price 9,-
-                p.menu-list__ingredients
-                  span 0,1 / Brut
-            .menu-list__item
-              .menu-list__tags 
-                img(src=require('@/images/icons/v1.svg'), alt="")
-                img(src=require('@/images/icons/v2.svg'), alt="")
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Marques De Alvarez Reserva Tempranillo
-                  span.menu-list__line
-                  span.menu-list__price 8.5,-
-                p.menu-list__ingredients
-                  span 0,15 / Spain
-            .menu-list__item
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Seafood Pasta
-                  span.menu-list__line
-                  span.menu-list__price 34,- per person
-                p.menu-list__ingredients
-                  span Edamame
-                  span /  Gochujang 
-                  span / Lemon
-                  span  / Wakame
-            .menu-list__item
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Champagne Veuve Duroy
-                  span.menu-list__line
-                  span.menu-list__price 13.5,-
-                p.menu-list__ingredients
-                  span 0,1 / Brut Reserve
-            .menu-list__item
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Helde Weissburgunder
-                  span.menu-list__line
-                  span.menu-list__price 10,-
-                p.menu-list__ingredients
-                  span 0,15 / Baden
-            .menu-list__item
-              .menu-list__tags 
-                img(src=require('@/images/icons/v1.svg'), alt="")
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Bread
-                  span.menu-list__line
-                  span.menu-list__price 5.5,-
-                p.menu-list__ingredients
-                  span Nori Butter, Extra Vergine, Olive Oil, Sea Salt
-      .menu-section 
-        h2.menu__title Cold & Hot Starters
-        .menu__item 
-          picture.menu__image
-            img(src=require('@/images/menu/3.svg'), alt="")
-          .menu-list
-            .menu-list__item
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Yellowfin Tuna Tatar
-                  span.menu-list__line
-                  span.menu-list__price 20,-
-                p.menu-list__ingredients
-                  span Ginger 
-                  span  / Coriander
-                  span / Apple 
-                  span  / Kimchi 
-                  span / Chili
-            .menu-list__item
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Scallop Ceviche
-                  span.menu-list__line
-                  span.menu-list__price 22,-
-                p.menu-list__ingredients
-                  span Mango 
-                  span / Coriander 
-                  span / Early leek 
-                  span  / Thai Curry 
-                  span  / Kimchi Sesame 
-                  span / Yuzu Pearls
-            .menu-list__item
-              .menu-list__tags 
-                img(src=require('@/images/icons/v1.svg'), alt="")
-                img(src=require('@/images/icons/v2.svg'), alt="")
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Letuce
-                  span.menu-list__line
-                  span.menu-list__price 22,-
-                p.menu-list__ingredients
-                  span Carrots
-                  span  / Pray 
-                  span / Pear 
-                  span / Pomegranate
-            .menu-list__item
-              .menu-list__tags 
-                img(src=require('@/images/icons/v1.svg'), alt="")
-                img(src=require('@/images/icons/v2.svg'), alt="")
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Letuce
-                  span.menu-list__line
-                  span.menu-list__price 22,-
-                p.menu-list__ingredients
-                  span Carrots
-                  span  / Pray 
-                  span / Pear 
-                  span / Pomegranate
-            .menu-list__item
-              .menu-list__tags 
-                img(src=require('@/images/icons/v1.svg'), alt="")
-                img(src=require('@/images/icons/v2.svg'), alt="")
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Letuce
-                  span.menu-list__line
-                  span.menu-list__price 22,-
-                p.menu-list__ingredients
-                  span Carrots
-                  span  / Pray 
-                  span / Pear 
-                  span / Pomegranate
-            .menu-list__item
-              .menu-list__tags 
-                img(src=require('@/images/icons/v1.svg'), alt="")
-                img(src=require('@/images/icons/v2.svg'), alt="")
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Letuce
-                  span.menu-list__line
-                  span.menu-list__price 22,-
-                p.menu-list__ingredients
-                  span Carrots
-                  span  / Pray 
-                  span / Pear 
-                  span / Pomegranate
-            .menu-list__item
+                    span Ginger 
+                    span  / Coriander
+                    span / Apple 
+                    span  / Kimchi 
+                    span / Chili
+              .menu-list__item
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Scallop Ceviche
+                    span.menu-list__line
+                    span.menu-list__price 22,-
+                  p.menu-list__ingredients
+                    span Mango 
+                    span / Coriander 
+                    span / Early leek 
+                    span  / Thai Curry 
+                    span  / Kimchi Sesame 
+                    span / Yuzu Pearls
+              .menu-list__item
+                .menu-list__tags 
+                  img(src=require('@/images/icons/v1.svg'), alt="")
+                  img(src=require('@/images/icons/v2.svg'), alt="")
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Letuce
+                    span.menu-list__line
+                    span.menu-list__price 22,-
+                  p.menu-list__ingredients
+                    span Carrots
+                    span  / Pray 
+                    span / Pear 
+                    span / Pomegranate
+              .menu-list__item
+                .menu-list__tags 
+                  img(src=require('@/images/icons/v1.svg'), alt="")
+                  img(src=require('@/images/icons/v2.svg'), alt="")
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Letuce
+                    span.menu-list__line
+                    span.menu-list__price 22,-
+                  p.menu-list__ingredients
+                    span Carrots
+                    span  / Pray 
+                    span / Pear 
+                    span / Pomegranate
+              .menu-list__item
+                .menu-list__tags 
+                  img(src=require('@/images/icons/v1.svg'), alt="")
+                  img(src=require('@/images/icons/v2.svg'), alt="")
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Letuce
+                    span.menu-list__line
+                    span.menu-list__price 22,-
+                  p.menu-list__ingredients
+                    span Carrots
+                    span  / Pray 
+                    span / Pear 
+                    span / Pomegranate
+              .menu-list__item
+                .menu-list__tags 
+                  img(src=require('@/images/icons/v1.svg'), alt="")
+                  img(src=require('@/images/icons/v2.svg'), alt="")
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Letuce
+                    span.menu-list__line
+                    span.menu-list__price 22,-
+                  p.menu-list__ingredients
+                    span Carrots
+                    span  / Pray 
+                    span / Pear 
+                    span / Pomegranate
+              .menu-list__item
 
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Letuce
-                  span.menu-list__line
-                  span.menu-list__price 22,-
-                p.menu-list__ingredients
-                  span Carrots
-                  span  / Pray 
-                  span / Pear 
-                  span / Pomegranate
-            .menu-list__item
-              .menu-list__tags 
-                img(src=require('@/images/icons/v1.svg'), alt="")
-                img(src=require('@/images/icons/v2.svg'), alt="")
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Letuce
-                  span.menu-list__line
-                  span.menu-list__price 22,-
-                p.menu-list__ingredients
-                  span Carrots
-                  span  / Pray 
-                  span / Pear 
-                  span / Pomegranate
-            .menu-list__item
-              .menu-list__text
-                .menu-list__heading 
-                  h3.menu-list__name  Oyster Geay Special No. 1 Natural
-                p.menu-list__ingredients
-                  span Carrots
-                  span  / Pray 
-                  span / Pear 
-                  span / Pomegranate
-                .menu-variations.menu-list__variations
-                  .menu-variations__item 
-                    span.menu-variations__value 6 pcs.
-                    span.menu-variations__line 
-                    span.menu-variations__price 34,-
-                  .menu-variations__item 
-                    span.menu-variations__value 12 pcs.
-                    span.menu-variations__line 
-                    span.menu-variations__price 66,-
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Letuce
+                    span.menu-list__line
+                    span.menu-list__price 22,-
+                  p.menu-list__ingredients
+                    span Carrots
+                    span  / Pray 
+                    span / Pear 
+                    span / Pomegranate
+              .menu-list__item
+                .menu-list__tags 
+                  img(src=require('@/images/icons/v1.svg'), alt="")
+                  img(src=require('@/images/icons/v2.svg'), alt="")
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Letuce
+                    span.menu-list__line
+                    span.menu-list__price 22,-
+                  p.menu-list__ingredients
+                    span Carrots
+                    span  / Pray 
+                    span / Pear 
+                    span / Pomegranate
+              .menu-list__item
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Oyster Geay Special No. 1 Natural
+                  p.menu-list__ingredients
+                    span Carrots
+                    span  / Pray 
+                    span / Pear 
+                    span / Pomegranate
+                  .menu-variations.menu-list__variations
+                    .menu-variations__item 
+                      span.menu-variations__value 6 pcs.
+                      span.menu-variations__line 
+                      span.menu-variations__price 34,-
+                    .menu-variations__item 
+                      span.menu-variations__value 12 pcs.
+                      span.menu-variations__line 
+                      span.menu-variations__price 66,- 
+    #Weinkarte.tabs-panel.container(role='tabpanel' tabindex='0' aria-labelledby='Weinkarte')
+      .menu
+        .menu-section 
+          h2.menu__title Aperitif 3
+          .menu__item 
+            picture.menu__image
+              img(src=require('@/images/menu/1.svg'), alt="")
+            .menu-list
+              each val in [1,1,1,1,1,1]
+                .menu-list__item
+                  .menu-list__tags 
+                    img(src=require('@/images/icons/v1.svg'), alt="")
+                    img(src=require('@/images/icons/v2.svg'), alt="")
+                  .menu-list__text
+                    .menu-list__heading 
+                      h3.menu-list__name  Yellowfin Tuna Tatar
+                      span.menu-list__line
+                      span.menu-list__price 14,-
+                    p.menu-list__ingredients
+                      span Tequila Mezcal
+                      span.menu-clarification , Mango
+                        span.menu-clarification__icon(aria-label="Zusätzliche anzeigen Information")
+                          svg(width="18" height="18")
+                            use(xlink:href="sprite.svg#question_sprite") 
+                          span.menu-clarification__toolbox Fermented korean spice paste
+                      span , Lime
+                      span , Tajin
+        .menu-section 
+          h2.menu__title Sparkling & Wine
+          .menu__item 
+            picture.menu__image
+              img(src=require('@/images/menu/2.svg'), alt="")
+            .menu-list
+              .menu-list__item
+                .menu-list__tags 
+                  img(src=require('@/images/icons/v1.svg'), alt="")
+                  img(src=require('@/images/icons/v2.svg'), alt="")
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Cremant De Loire Michel Laurent
+                    span.menu-list__line
+                    span.menu-list__price 9,-
+                  p.menu-list__ingredients
+                    span 0,1 / Brut
+              .menu-list__item
+                .menu-list__tags 
+                  img(src=require('@/images/icons/v1.svg'), alt="")
+                  img(src=require('@/images/icons/v2.svg'), alt="")
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Marques De Alvarez Reserva Tempranillo
+                    span.menu-list__line
+                    span.menu-list__price 8.5,-
+                  p.menu-list__ingredients
+                    span 0,15 / Spain
+              .menu-list__item
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Seafood Pasta
+                    span.menu-list__line
+                    span.menu-list__price 34,- per person
+                  p.menu-list__ingredients
+                    span Edamame
+                    span /  Gochujang 
+                    span / Lemon
+                    span  / Wakame
+              .menu-list__item
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Champagne Veuve Duroy
+                    span.menu-list__line
+                    span.menu-list__price 13.5,-
+                  p.menu-list__ingredients
+                    span 0,1 / Brut Reserve
+              .menu-list__item
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Helde Weissburgunder
+                    span.menu-list__line
+                    span.menu-list__price 10,-
+                  p.menu-list__ingredients
+                    span 0,15 / Baden
+              .menu-list__item
+                .menu-list__tags 
+                  img(src=require('@/images/icons/v1.svg'), alt="")
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Bread
+                    span.menu-list__line
+                    span.menu-list__price 5.5,-
+                  p.menu-list__ingredients
+                    span Nori Butter, Extra Vergine, Olive Oil, Sea Salt
+        .menu-section 
+          h2.menu__title Cold & Hot Starters
+          .menu__item 
+            picture.menu__image
+              img(src=require('@/images/menu/3.svg'), alt="")
+            .menu-list
+              .menu-list__item
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Yellowfin Tuna Tatar
+                    span.menu-list__line
+                    span.menu-list__price 20,-
+                  p.menu-list__ingredients
+                    span Ginger 
+                    span  / Coriander
+                    span / Apple 
+                    span  / Kimchi 
+                    span / Chili
+              .menu-list__item
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Scallop Ceviche
+                    span.menu-list__line
+                    span.menu-list__price 22,-
+                  p.menu-list__ingredients
+                    span Mango 
+                    span / Coriander 
+                    span / Early leek 
+                    span  / Thai Curry 
+                    span  / Kimchi Sesame 
+                    span / Yuzu Pearls
+              .menu-list__item
+                .menu-list__tags 
+                  img(src=require('@/images/icons/v1.svg'), alt="")
+                  img(src=require('@/images/icons/v2.svg'), alt="")
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Letuce
+                    span.menu-list__line
+                    span.menu-list__price 22,-
+                  p.menu-list__ingredients
+                    span Carrots
+                    span  / Pray 
+                    span / Pear 
+                    span / Pomegranate
+              .menu-list__item
+                .menu-list__tags 
+                  img(src=require('@/images/icons/v1.svg'), alt="")
+                  img(src=require('@/images/icons/v2.svg'), alt="")
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Letuce
+                    span.menu-list__line
+                    span.menu-list__price 22,-
+                  p.menu-list__ingredients
+                    span Carrots
+                    span  / Pray 
+                    span / Pear 
+                    span / Pomegranate
+              .menu-list__item
+                .menu-list__tags 
+                  img(src=require('@/images/icons/v1.svg'), alt="")
+                  img(src=require('@/images/icons/v2.svg'), alt="")
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Letuce
+                    span.menu-list__line
+                    span.menu-list__price 22,-
+                  p.menu-list__ingredients
+                    span Carrots
+                    span  / Pray 
+                    span / Pear 
+                    span / Pomegranate
+              .menu-list__item
+                .menu-list__tags 
+                  img(src=require('@/images/icons/v1.svg'), alt="")
+                  img(src=require('@/images/icons/v2.svg'), alt="")
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Letuce
+                    span.menu-list__line
+                    span.menu-list__price 22,-
+                  p.menu-list__ingredients
+                    span Carrots
+                    span  / Pray 
+                    span / Pear 
+                    span / Pomegranate
+              .menu-list__item
+
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Letuce
+                    span.menu-list__line
+                    span.menu-list__price 22,-
+                  p.menu-list__ingredients
+                    span Carrots
+                    span  / Pray 
+                    span / Pear 
+                    span / Pomegranate
+              .menu-list__item
+                .menu-list__tags 
+                  img(src=require('@/images/icons/v1.svg'), alt="")
+                  img(src=require('@/images/icons/v2.svg'), alt="")
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Letuce
+                    span.menu-list__line
+                    span.menu-list__price 22,-
+                  p.menu-list__ingredients
+                    span Carrots
+                    span  / Pray 
+                    span / Pear 
+                    span / Pomegranate
+              .menu-list__item
+                .menu-list__text
+                  .menu-list__heading 
+                    h3.menu-list__name  Oyster Geay Special No. 1 Natural
+                  p.menu-list__ingredients
+                    span Carrots
+                    span  / Pray 
+                    span / Pear 
+                    span / Pomegranate
+                  .menu-variations.menu-list__variations
+                    .menu-variations__item 
+                      span.menu-variations__value 6 pcs.
+                      span.menu-variations__line 
+                      span.menu-variations__price 34,-
+                    .menu-variations__item 
+                      span.menu-variations__value 12 pcs.
+                      span.menu-variations__line 
+                      span.menu-variations__price 66,-
+
+  include ../blocks/cta-booking
+  include ../blocks/cta

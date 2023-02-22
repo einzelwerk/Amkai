@@ -120,6 +120,22 @@ $image-width: 390px;
 }
 
 .menu-section {
+  @include media(md) {
+    margin-bottom: 60px;
+  }
+
+  margin-bottom: 100px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.section-menu {
+  @include media(md) {
+    margin-bottom: 60px;
+  }
+
   margin-bottom: 100px;
 
   &:last-child {

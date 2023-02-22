@@ -1,0 +1,59 @@
+@use '../utils/mixins' as *;
+
+.menu-pdf {
+  @include media(md) {
+    margin-top: 60px;
+  }
+
+  margin-top: 100px;
+
+  &__inner {
+    @include media(md) {
+      flex-direction: column;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 42px 0;
+
+    border-color: var(--black-300);
+    border-style: solid;
+    border-width: 1px 0;
+  }
+
+  &__links {
+    @include media(md) {
+      margin-top: 12px;
+    }
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
+    font-weight: 500;
+
+    svg {
+      margin-left: 10px;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__title {
+    @include media(md) {
+      margin-right: 0;
+    }
+
+    margin-right: 24px;
+    font-size: rem(14px);
+    opacity: 0.5;
+  }
+}

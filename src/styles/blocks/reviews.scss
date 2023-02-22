@@ -41,6 +41,11 @@
   }
 
   &__navigation {
+    @include media(md) {
+      justify-content: center;
+      margin-top: 35px;
+    }
+
     justify-content: flex-end;
     margin-top: 72px;
   }
