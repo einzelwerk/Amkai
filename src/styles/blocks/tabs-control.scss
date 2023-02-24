@@ -46,9 +46,19 @@
     }
 
     flex: 1;
+
     margin-right: 12px;
+
     text-align: center;
+
     background: rgb(255 255 255 / 12%);
+
+    transition: 0.25s;
+
+    &[aria-selected='true'] {
+      color: var(--black-200);
+      background: var(--white-color);
+    }
 
     &:last-child {
       margin: 0;
