@@ -4,6 +4,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
     document.querySelector(e.currentTarget.getAttribute('href')).scrollIntoView({
       behavior: 'smooth',
+      block: 'end',
     });
   });
 });
