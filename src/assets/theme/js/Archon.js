@@ -1,11 +1,9 @@
-window.addEventListener('load', () => {
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener('click', (e) => {
-      e.preventDefault();
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', (e) => {
+    e.preventDefault();
 
-      document.querySelector(e.currentTarget.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth',
-      });
+    document.querySelector(e.currentTarget.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth',
     });
   });
 });
