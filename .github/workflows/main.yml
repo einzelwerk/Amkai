@@ -23,6 +23,7 @@ jobs:
             **/node_modules/**
             *.html
             .idea
+            download_sprite.svg
 
       - name: send Boshnik telegram message
         uses: appleboy/telegram-action@master
