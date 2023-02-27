@@ -126,13 +126,13 @@ $image-width: 390px;
 
   margin-bottom: 100px;
 
-  &:nth-child(even) {
+  &:nth-child(odd) {
     .menu__item {
       @include media(md) {
         grid-template-columns: 1fr;
       }
 
-      grid-template-columns: 1fr $image-width;
+      grid-template-columns: $image-width 1fr;
     }
 
     .menu__image {
@@ -140,7 +140,7 @@ $image-width: 390px;
         order: -1;
       }
 
-      order: 2;
+      order: -1;
     }
   }
 
