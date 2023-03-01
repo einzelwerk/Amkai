@@ -127,21 +127,21 @@ $image-width: 390px;
   display: block;
   margin-bottom: 100px;
 
-  &:nth-child(odd) {
+  &:nth-child(even) {
     .menu__item {
       @include media(md) {
         grid-template-columns: 1fr;
       }
 
-      grid-template-columns: $image-width 1fr;
+      grid-template-columns: 1fr $image-width;
     }
 
     .menu__image {
       @include media(md) {
-        order: -1;
+        order: 2;
       }
 
-      order: -1;
+      order: 2;
     }
   }
 
