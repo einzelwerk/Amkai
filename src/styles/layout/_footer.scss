@@ -339,7 +339,8 @@ body footer .btn-bar .bar-item a .bar-title:after {
     left: 10px;
     bottom: 20px;
     position: fixed;
-    display: none;
+    display: flex;
+    align-items: center;
     flex-direction: row;
     background: #9b8164;
     width: calc(100% - 20px);
