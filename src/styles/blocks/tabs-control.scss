@@ -55,6 +55,10 @@
 
     transition: 0.25s;
 
+    &:focus {
+      outline: none;
+    }
+
     &[aria-selected='true'] {
       color: var(--black-200);
       background: var(--white-color);
