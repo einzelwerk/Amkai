@@ -12,7 +12,7 @@ class Sliders {
       modules: [Navigation, Pagination],
       init: false,
       slidesPerView: 1,
-
+      loop: true,
       spaceBetween: 30,
       navigation: {
         nextEl: root?.querySelector('.slider-navigation__next'),
