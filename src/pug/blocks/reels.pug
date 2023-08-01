@@ -1,0 +1,23 @@
+section.section.reels.container 
+    .reels__content 
+        h2.reels__content-title Reels 
+        p.reels__content-desc Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und diese durcheinander warf um ein Musterbuch zu erstellen. 
+    .reels__gallery
+        .reels__slider.swiper
+            .swiper-wrapper
+                .swiper-slide
+                    picture 
+                        img(src=require('@/images/reels/reels-1.png'))
+                .swiper-slide
+                    picture 
+                        img(src=require('@/images/reels/reels-2.png'))
+                .swiper-slide
+                    picture 
+                        img(src=require('@/images/reels/reels-3.png'))
+            .slider-navigation.slider-navigation--reels
+                .slider-navigation--reels__btn.slider-navigation__prev
+                    svg(width='24' height='24')
+                        use(href='sprite.svg#arrow-prev_sprite')
+                .slider-navigation--reels__btn.slider-navigation__next
+                    svg(width='24' height='24')
+                        use(href='sprite.svg#arrow-next_sprite')

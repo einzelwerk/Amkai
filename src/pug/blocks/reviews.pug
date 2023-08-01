@@ -1,0 +1,104 @@
+section.section.container#reviews
+  - locals.sectionTitle = 'Unsere Bewertungen'
+  - locals.left = true
+  include ../blocks/section-heading
+  .reviews.swiper 
+    .swiper-wrapper 
+      .reviews__item.swiper-slide 
+        p.reviews__desc “Auf Empfehlung da gewesen und es nicht bereut.Ein einzigartiges Restaurant mit einem aufmerksamen Personal und 1A Speisen und Getränken.”
+        .reviews__score.reviews-score 
+          .reviews-score__item 
+            span.reviews-score__title Essen
+            span.reviews-score__value 5
+          .reviews-score__item 
+            span.reviews-score__title Service
+            span.reviews-score__value 5
+          .reviews-score__item 
+            span.reviews-score__title Ambiente
+            span.reviews-score__value 5
+        .reviews__bottom 
+          picture.reviews__logo
+            img(src=require('@/images/reviews/1.svg') , alt="")
+          a.reviews__link(href="")
+            svg(width="10px" height="18px")
+              use(xlink:href="sprite.svg#arrow_sprite") 
+      .reviews__item.swiper-slide 
+        p.reviews__desc “Auf Empfehlung da gewesen und es nicht bereut.Ein einzigartiges Restaurant mit einem aufmerksamen Personal und 1A Speisen und Getränken.”
+        .reviews__score.reviews-score 
+          .reviews-score__item 
+            span.reviews-score__title Essen
+            span.reviews-score__value 5
+          .reviews-score__item 
+            span.reviews-score__title Service
+            span.reviews-score__value 5
+          .reviews-score__item 
+            span.reviews-score__title Ambiente
+            span.reviews-score__value 5
+        .reviews__bottom 
+          picture.reviews__logo
+            img(src=require('@/images/reviews/2.svg') , alt="")
+          a.reviews__link(href="")
+            svg(width="10px" height="18px")
+              use(xlink:href="sprite.svg#arrow_sprite") 
+      .reviews__item.swiper-slide 
+        p.reviews__desc “Auf Empfehlung da gewesen und es nicht bereut.Ein einzigartiges Restaurant mit einem aufmerksamen Personal und 1A Speisen und Getränken.”
+        .reviews__score.reviews-score 
+          .reviews-score__item 
+            span.reviews-score__title Essen
+            span.reviews-score__value 5
+          .reviews-score__item 
+            span.reviews-score__title Service
+            span.reviews-score__value 5
+          .reviews-score__item 
+            span.reviews-score__title Ambiente
+            span.reviews-score__value 5
+        .reviews__bottom 
+          picture.reviews__logo
+            img(src=require('@/images/reviews/3.svg') , alt="")
+          a.reviews__link(href="")
+            svg(width="10px" height="18px")
+              use(xlink:href="sprite.svg#arrow_sprite") 
+      .reviews__item.swiper-slide 
+        p.reviews__desc “Auf Empfehlung da gewesen und es nicht bereut.Ein einzigartiges Restaurant mit einem aufmerksamen Personal und 1A Speisen und Getränken.”
+        .reviews__score.reviews-score 
+          .reviews-score__item 
+            span.reviews-score__title Essen
+            span.reviews-score__value 5
+          .reviews-score__item 
+            span.reviews-score__title Service
+            span.reviews-score__value 5
+          .reviews-score__item 
+            span.reviews-score__title Ambiente
+            span.reviews-score__value 5
+        .reviews__bottom 
+          picture.reviews__logo
+            img(src=require('@/images/reviews/3.svg') , alt="")
+          a.reviews__link(href="")
+            svg(width="10px" height="18px")
+              use(xlink:href="sprite.svg#arrow_sprite") 
+      .reviews__item.swiper-slide 
+        p.reviews__desc “Auf Empfehlung da gewesen und es nicht bereut.Ein einzigartiges Restaurant mit einem aufmerksamen Personal und 1A Speisen und Getränken.”Auf Empfehlung da gewesen und es nicht bereut.Ein einzigartiges Restaurant mit einem aufmerksamen Personal und 1A Speisen und Getränken.”
+        .reviews__score.reviews-score 
+          .reviews-score__item 
+            span.reviews-score__title Essen
+            span.reviews-score__value 5
+          .reviews-score__item 
+            span.reviews-score__title Service
+            span.reviews-score__value 5
+          .reviews-score__item 
+            span.reviews-score__title Ambiente
+            span.reviews-score__value 5
+        .reviews__bottom 
+          picture.reviews__logo
+            img(src=require('@/images/reviews/3.svg') , alt="")
+          a.reviews__link(href="")
+            svg(width="10px" height="18px")
+              use(xlink:href="sprite.svg#arrow_sprite") 
+    .reviews__navigation.slider-navigation 
+      button.slider-navigation__btn.slider-navigation__prev 
+        svg(width="30" height="10")
+          use(xlink:href="sprite.svg#arrow-l_sprite") 
+      .slider-pagination.slider-navigation__pagination 
+      button.slider-navigation__btn.slider-navigation__next 
+        svg(width="30" height="10")
+          use(xlink:href="sprite.svg#arrow-r_sprite") 

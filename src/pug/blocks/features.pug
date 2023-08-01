@@ -1,0 +1,42 @@
+-
+  var features = [
+    {
+      title:'Freie Sonn- und Montage & (fast) alle gesetzlichen Feiertage (Weihnachten und Silvester frei)',
+      desc: 'Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text.'
+    },
+    {
+      title: 'Mitgliedschaft in einem Sportstudio',
+      desc: 'Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text.'
+    },
+    {
+      title:'50 % Ermäßigung im eigenen Restaurant für die Mitarbeiter',
+      desc: 'Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text.'
+    },
+    {
+      title: 'Externe Schulungsangebote mit Kostenübernahme',
+      desc: 'Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text.'
+    },
+    {
+      title:'Elektrofahrrad',
+      desc: 'Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text.'
+    },
+    {
+      title:'Übertarifliche Bezahlung',
+      desc: 'Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text.'
+    }
+  ] 
+
+section.container.section.section--m.section--border-bottom#benefits
+  .features
+    h2.features__title Ihre Benefits
+    .features-block 
+      .features-grid.features-block__col
+        each val,index in features
+          .features-grid__item
+            .features-grid__icon 
+              img(src=require(`@/images/features/${index + 1}.svg`), alt="")
+            .features-grid__text 
+              h4.features-grid__title= val.title 
+              p.features-grid__desc= val.desc
+      picture.features-block__image
+        img(src=require('@/images/features-jobs.jpg'), alt="")

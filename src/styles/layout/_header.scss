@@ -1,0 +1,104 @@
+@use '../utils/vars' as *;
+@use '../utils/mixins' as *;
+
+.header {
+  @include media(lg) {
+    padding: 10px var(--gap);
+  }
+
+  position: absolute;
+  z-index: 1010;
+  z-index: 1020;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  padding: 16px 40px;
+
+  transition: transform 0.5s, background 0.5s;
+
+  &.menu-open {
+    background: var(--background);
+  }
+
+  &.fixed {
+    position: fixed;
+    background: var(--background);
+    animation: from-top 0.5s;
+  }
+
+  &__lang {
+    margin-right: 24px;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    @include media(lg) {
+      display: none;
+    }
+    @include media(xl) {
+      margin-left: 1rem;
+    }
+
+    margin-right: auto;
+    margin-left: 33px;
+  }
+
+  &__btn-group {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  &__btn {
+    @include media(xl) {
+      margin-right: 0;
+    }
+
+    flex: 1;
+
+    min-width: 140px;
+    margin-right: 12px;
+    padding-right: 0;
+    padding-left: 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__btn-link {
+    @include media(xl) {
+      display: none;
+    }
+  }
+
+  &__mobile-btn {
+    margin-left: 24px;
+    padding: 10px;
+    transition: background 0.5s;
+
+    span {
+      display: block;
+
+      width: 24px;
+      height: 2px;
+      margin-bottom: 5px;
+
+      background: var(--white-color);
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    &.opened {
+      background: rgb(255 255 255 / 12%);
+    }
+  }
+}

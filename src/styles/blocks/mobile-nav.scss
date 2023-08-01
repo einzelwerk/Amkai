@@ -1,0 +1,96 @@
+@use '../utils/mixins' as *;
+
+.mobile-nav-wrapper {
+  @include media(lg, min-width) {
+    display: none;
+  }
+
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  transform: translateX(100%);
+
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100%;
+  height: calc(100% - var(--header-height));
+  max-height: 100vh;
+  padding-top: 15px;
+
+  background: var(--background);
+
+  transition: 0.5s;
+
+  &.opened {
+    transform: translateX(0%);
+  }
+}
+
+.mobile-nav {
+  margin: 0;
+
+  &__item {
+    margin-bottom: 20px;
+    font-size: rem(18px);
+    font-weight: 500;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__bottom {
+    margin-top: 100px;
+  }
+
+  &__bottom-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    .btn {
+      flex: none;
+    }
+
+    .lang {
+      &__content {
+        top: auto;
+        bottom: 100%;
+        left: 0;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__arrow {
+    margin-left: 10px;
+  }
+}
+
+.mobile-sub {
+  display: none;
+  padding-top: 16px;
+  padding-left: 12px;
+
+  &__item {
+    margin-bottom: 16px;
+    font-size: rem(16px);
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__link {
+    opacity: 0.8;
+    transition: opacity 0.5s, color 0.5s;
+  }
+
+  &.opened {
+    display: block;
+  }
+}

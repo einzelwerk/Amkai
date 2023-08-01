@@ -1,0 +1,77 @@
+header.header 
+  .header__inner 
+    .header__logo.logo 
+      a.logo__link(href="") 
+        img.logo__src(src=require('@/images/logo.svg'), alt="")
+    nav.header__nav.nav 
+      ul.nav__list
+        each val in menu 
+          li.nav__item(class=val.hasSub ? 'nav__item--has-sub' : '')
+            a.nav__link(href=val.link)=val.name
+            if val.hasSub
+              ul.nav__sub-menu.sub-menu
+                each val2 in val.hasSub
+                  li.sub-menu__item 
+                    a.sub-menu__link(href=val2.link)=val2.name
+    .header__btn-group
+      .header__lang.lang.hidden-mobile
+        button.lang__btn.js-toggle-lang 
+          img(src=require('@/images/de.svg'), alt="")
+          svg(width='12' height='12')
+            use(href='sprite.svg#caret_sprite')
+        ul.lang__content 
+          li.lang__item 
+            a.lang__link(href="") 
+              img.lang__image(src=require('@/images/de.svg'), alt="")
+              span English
+          li.lang__item 
+            a.lang__link(href="") 
+              img.lang__image(src=require('@/images/en.svg'), alt="")
+              span Deutsch
+      button.header__btn.btn.btn--primary.reservation
+        span.btn__inner Reservierung
+      a.header__btn.header__btn-link.header__btn-link.btn.btn--secondary
+        span.btn__inner Gutschein
+          svg(width="18" height="18")
+            use(xlink:href="sprite.svg#card_sprite")
+    .header__mobile-btn.js-open-mobile-menu.hidden-desktop
+      svg(width="24" height="16")
+        use(xlink:href="sprite.svg#mobile_sprite") 
+  #mobile-nav.mobile-nav-wrapper
+    nav.header__mobile-nav.mobile-nav.container
+      ul.mobile-nav__list 
+        each val in menu
+          li.mobile-nav__item(class=val.hasSub ? 'mobile-nav__item--has-sub' : '')
+            a.mobile-nav__link(href=val.link)=val.name
+            if val.hasSub 
+              span.mobile-nav__arrow 
+                svg(width="16" height="16")
+                  use(xlink:href="sprite.svg#caret_sprite") 
+            if val.hasSub 
+              ul.mobile-sub
+                each val2 in val.hasSub
+                  li.mobile-sub__item
+                    a.mobile-sub__link(href=val2.link)=val.name           
+    .mobile-nav__bottom
+      .mobile-nav__bottom-group.container
+        .lang
+          button.lang__btn.js-toggle-lang 
+            img(src=require('@/images/de.svg'), alt="")
+            svg(width='12' height='12')
+              use(href='sprite.svg#caret_sprite')
+          ul.lang__content 
+            li.lang__item 
+              a.lang__link(href="") 
+                img.lang__image(src=require('@/images/de.svg'), alt="")
+                span English
+            li.lang__item 
+              a.lang__link(href="") 
+                img.lang__image(src=require('@/images/en.svg'), alt="")
+                span Deutsch
+        a.header__btn.btn.btn--secondary
+          span.btn__inner
+            span Gutschein
+            svg(width="18" height="18")
+              use(xlink:href="sprite.svg#card_sprite")
+      buttom.header__btn.btn.btn--primary.reservation(type="submit")
+        span.btn__inner Reservieren

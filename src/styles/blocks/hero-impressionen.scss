@@ -1,0 +1,120 @@
+@use '../utils/mixins' as *;
+
+.hero-impressionen {
+  margin-bottom: 100px;
+
+  @include media(lg) {
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 72px;
+
+    $this: &;
+
+    &-picture {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+
+      & > img {
+        border-radius: 12px;
+      }
+    }
+
+    @include media(lg) {
+      gap: 24px;
+    }
+
+    &-row {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      gap: 24px;
+      overflow: hidden;
+
+      @include media(lg) {
+        gap: 16px;
+      }
+
+      @include media(sm) {
+        gap: 12px;
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 24px;
+    overflow: hidden;
+
+    @include media(lg) {
+      gap: 16px;
+    }
+
+    @include media(sm) {
+      gap: 12px;
+    }
+    &-title {
+      display: inline-flex;
+      color: rgba(255, 255, 255, 0.08);
+      text-align: center;
+      font-family: Lora;
+      font-size: 99px;
+      font-weight: 400;
+      line-height: 64px;
+      text-transform: uppercase;
+      z-index: 2;
+
+      @include media(lg) {
+        font-size: 64px;
+        line-height: 52px;
+      }
+      @include media(sm) {
+        font-size: 40px;
+        line-height: 48px;
+      }
+
+      &.hoverable {
+        color: var(--white-color);
+        cursor: pointer;
+        transition: color 0.15s ease-in-out;
+
+        &:hover {
+          color: var(--gold-color);
+        }
+      }
+    }
+  }
+
+  &__action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 68px;
+
+    @include media(lg) {
+      margin-top: 36px;
+    }
+
+    &-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 220px;
+      padding: 12px 17px;
+      background-color: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  }
+}

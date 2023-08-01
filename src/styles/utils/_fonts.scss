@@ -1,0 +1,5 @@
+@use './mixins' as *;
+
+@include font-face(Montserrat, '../assets/theme/fonts/Montserrat-Light', 300, normal, woff2 woff);
+@include font-face(Montserrat, '../assets/theme/fonts/Montserrat-Regular', 400, normal, woff2 woff);
+@include font-face(Montserrat, '../assets/theme/fonts/Montserrat-Medium', 500, normal, woff2 woff);

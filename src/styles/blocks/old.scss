@@ -1,0 +1,286 @@
+/* stylelint-disable */
+
+.btn--red {
+  background: darkred;
+}
+.btn.btn--big {
+  display: inline-block;
+  padding: 20px;
+  max-width: 380px;
+  width: 100%;
+}
+.header .logo {
+  width: 72px;
+  height: 72px;
+}
+.nav__item--has-sub:hover .sub-menu {
+  display: block;
+  background: #0c1921;
+}
+
+.hero__desc {
+  padding-bottom: 24px;
+}
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+}
+.sub-menu__item {
+  font-size: 16px;
+}
+.archon-nav__link {
+  display: block;
+  padding: 14.5px 20px;
+}
+.vacancy-form__desc {
+  margin-bottom: 32px;
+}
+
+.nav__link[data-job-child]:after {
+  content: attr(data-job-child);
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  background-color: red;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 12px;
+  margin-left: 6px;
+  padding-right: 2px;
+}
+.vacancy-list-4 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 768px) {
+  .vacancy-list-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+#modal-vacancy .main-form__file-placeholder use {
+  stroke: #a4a4a4;
+  opacity: 0.4;
+}
+.archon-nav {
+  z-index: 1000;
+}
+.post-hero {
+  overflow: hidden;
+}
+.post-hero .swiper {
+  width: 100%;
+  --swiper-theme-color: #fff;
+}
+.post-hero__image img {
+  width: 100%;
+  height: auto;
+}
+.vacancy-content {
+  overflow: inherit;
+}
+.vacancy-content ~ .cta-section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.page-content ul li::before {
+  top: 11px;
+}
+.just-validate-error-label {
+  display: block;
+  width: 100%;
+}
+.checkbox__desc {
+  flex: 1 0 0;
+}
+.vacancy-content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.vacancy-content ~ .cta-section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.vacancy-content .page-content-sidebar {
+  max-width: 536px;
+  padding-left: 60px;
+  padding-top: 60px;
+  border-left: 1px solid #22313b;
+  padding-bottom: 100px;
+}
+.page-content-sidebar .stiky {
+  position: sticky;
+  top: 60px;
+}
+.recruiter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+}
+.page-content-sidebar .btn {
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  padding: 19px;
+}
+
+.page-content {
+  max-width: 745px;
+  padding-top: 90px;
+  padding-right: 60px;
+  border-top: 1px solid #22313b;
+}
+.page-content article {
+  padding-bottom: 100px;
+}
+/* modal */
+#modal-vacancy {
+  width: 100%;
+  max-width: 720px;
+  padding: 60px;
+  background: #ffffff;
+  cursor: initial;
+}
+
+#modal-vacancy h3 {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50px;
+  color: #1c1c1c;
+  margin-bottom: 42px;
+  text-align: center;
+}
+
+.modal-form .main-form__item {
+  border-bottom: 1px solid rgba(28, 28, 28, 0.2);
+}
+.modal-form .main-form__submit {
+  background: #847455;
+  padding: 19px 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: #ffffff;
+  width: 100%;
+}
+.modal-form .checkbox__fake {
+  border: 1px solid #1c1c1c;
+}
+.modal-form .checkbox__input:checked ~ .checkbox__fake {
+  background-color: var(--gold-color);
+  background-image: url('../assets/theme/images/check.svg');
+  background-position: 4px center;
+}
+.main-form__input:focus {
+  outline: none !important;
+}
+.fancybox__content.modal-form .carousel__button.is-close {
+  background: #29353c;
+  border-radius: 0;
+  width: 50px;
+  height: 50px;
+  top: 20px;
+  right: 20px;
+}
+#modal-vacancy .main-form__file-placeholder use {
+  stroke: #a4a4a4;
+  opacity: 0.4;
+}
+@media (max-width: 992px) {
+  .vacancy-content {
+    display: block;
+  }
+  .vacancy-content .page-content-sidebar {
+    padding: 0 20px 60px;
+  }
+}
+@media (max-width: 769px) {
+  .page-content {
+    padding-right: 0;
+  }
+  .cta__inner {
+    grid-gap: 40px;
+    gap: 40px;
+  }
+  .recruiter-wrapper {
+    flex-wrap: wrap;
+    gap: 26px;
+  }
+  .post-hero__btn:last-child .btn__inner svg {
+    margin: 0;
+  }
+  .post-hero__btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 17px 10px;
+  }
+  .post-hero__btn .btn__inner {
+    gap: 15px;
+  }
+  .content-block__desc {
+    padding-right: 0;
+  }
+  .vacancy-content .page-content-sidebar {
+    border: none;
+  }
+  .post-hero-section {
+    padding-bottom: 0;
+  }
+  .fancybox__content.modal-form .carousel__button.is-close {
+    width: 40px;
+    height: 40px;
+  }
+  #modal-vacancy {
+    background: #e3e3e3;
+    border-radius: 24px 24px 0 0;
+    padding: 32px 16px 20px;
+  }
+  #modal-vacancy h3 {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    color: #847455;
+    padding: 0 30px;
+    margin-bottom: 28px;
+  }
+  .modal-form .main-form__submit {
+    color: #0c1921;
+  }
+  .fancybox__slide {
+    padding: 48px 0 0;
+  }
+  .post-hero__btn:last-child .btn__inner span {
+    display: inline-block;
+  }
+  .page-content article {
+    padding-bottom: 60px;
+  }
+  .archon-nav__link {
+    padding: 10px 20px;
+  }
+}
+
+body main .content.sub h1 {
+  margin-bottom: 1.5rem;
+}
+
+.footer h6 {
+  color: var(--gold-color);
+}
+
+.cta-content h2 span {
+  color: var(--gold-color);
+}
+
+.cta-booking__title span {
+  color: var(--gold-color);
+}

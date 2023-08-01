@@ -1,0 +1,400 @@
+@use '../utils/mixins' as *;
+
+.feedback {
+  font-family: Lora;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  overflow: hidden;
+
+  @include media(md) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  &__heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    color: var(--white-color);
+    text-align: center;
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 100px;
+    opacity: 0.6;
+    margin-bottom: 100px;
+
+    @include media(md) {
+      font-size: 40px;
+      line-height: 40px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__content {
+    &-first {
+      position: relative;
+      height: 1060px;
+
+      @include media(lg) {
+        height: 710px;
+      }
+      @include media(sm) {
+        height: 350px;
+      }
+    }
+    &-second {
+      position: relative;
+      height: 1080px;
+
+      @include media(lg) {
+        height: 710px;
+      }
+      @include media(sm) {
+        height: 500px;
+      }
+    }
+    &-third {
+      position: relative;
+      height: 1080px;
+
+      @include media(lg) {
+        height: 710px;
+      }
+      @include media(sm) {
+        height: 630px;
+      }
+    }
+    &-fourth {
+      position: relative;
+      height: 1200px;
+
+      @include media(lg) {
+        height: 710px;
+      }
+      @include media(sm) {
+        height: 500px;
+      }
+    }
+  }
+
+  &__first {
+    &-text {
+      position: absolute;
+      top: 0;
+      right: 5%;
+      width: 426px;
+      height: 96px;
+      color: var(--white-color);
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+
+      @include media(xl) {
+        right: 0;
+      }
+
+      @include media(lg) {
+        top: 80%;
+        right: 15%;
+        z-index: 2;
+        text-align: center;
+      }
+
+      @include media(md) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      @include media(sm) {
+        width: 23ch;
+        top: 70%;
+        right: 25%;
+      }
+
+      @media (max-width: 420px) {
+        top: 75%;
+        right: 15%;
+      }
+    }
+    &-one {
+      @include media(lg) {
+        position: absolute;
+        left: 10%;
+      }
+      @include media(sm) {
+        position: absolute;
+        left: 20%;
+      }
+
+      @media (max-width: 420px) {
+        left: 0;
+      }
+    }
+
+    &-two {
+      position: absolute;
+      bottom: 10%;
+      right: 5%;
+
+      @include media(lg) {
+        right: 10%;
+      }
+      @include media(sm) {
+        top: 20%;
+        right: 20%;
+      }
+      @media (max-width: 420px) {
+        right: 1%;
+      }
+    }
+  }
+  &__second {
+    &-text {
+      position: absolute;
+      bottom: 30%;
+      left: 5%;
+      width: 426px;
+      height: 96px;
+      color: var(--white-color);
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+      z-index: 2;
+      height: min-content;
+
+      @include media(xl) {
+        right: 0;
+      }
+
+      @include media(lg) {
+        top: 55%;
+        right: 15%;
+        z-index: 2;
+        text-align: center;
+      }
+
+      @include media(md) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      @include media(sm) {
+        width: 28ch;
+        top: 90%;
+        right: 25%;
+      }
+
+      @media (max-width: 420px) {
+        right: -5%;
+      }
+    }
+    &-one {
+      @include media(lg) {
+        position: absolute;
+        left: 10%;
+      }
+      @include media(sm) {
+        position: absolute;
+        left: 0;
+      }
+    }
+
+    &-two {
+      position: absolute;
+      bottom: 20%;
+      right: 10%;
+
+      @include media(lg) {
+        right: 10%;
+      }
+      @include media(sm) {
+        top: 25%;
+        right: 20%;
+      }
+      @media (max-width: 420px) {
+        right: -5%;
+      }
+    }
+
+    &-three {
+      position: absolute;
+      right: 0;
+      top: 40%;
+
+      @include media(lg) {
+        top: 60%;
+      }
+
+      @include media(sm) {
+        top: 68%;
+        right: 5%;
+      }
+    }
+  }
+  &__third {
+    &-text {
+      position: absolute;
+      bottom: 0;
+      left: 5%;
+      width: 585px;
+      color: var(--white-color);
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+      z-index: 2;
+      height: min-content;
+
+      @include media(xl) {
+        right: 0;
+      }
+
+      @include media(lg) {
+        top: 75%;
+        right: 15%;
+        z-index: 2;
+        text-align: center;
+      }
+
+      @include media(md) {
+        font-size: 16px;
+        line-height: 20px;
+        width: 29ch;
+      }
+
+      @include media(sm) {
+        width: 28ch;
+        top: 75%;
+        right: 25%;
+      }
+
+      @media (max-width: 420px) {
+        right: -5%;
+      }
+    }
+    &-one {
+      position: absolute;
+      top: 10%;
+      @include media(lg) {
+        left: 0;
+      }
+      @include media(sm) {
+        position: absolute;
+        left: 0;
+      }
+    }
+
+    &-two {
+      position: absolute;
+      right: 17%;
+
+      @include media(lg) {
+        right: 20%;
+      }
+      @include media(sm) {
+        top: 25%;
+        right: 20%;
+      }
+      @media (max-width: 420px) {
+        right: 0;
+      }
+    }
+
+    &-three {
+      position: absolute;
+      right: 6.5%;
+      top: 60%;
+
+      @include media(lg) {
+        top: 50%;
+      }
+
+      @include media(sm) {
+        top: 50%;
+        right: 50%;
+      }
+    }
+  }
+
+  &__fourth {
+    &-text {
+      position: absolute;
+      bottom: 7%;
+      right: 7%;
+      width: 426px;
+      height: 96px;
+      color: var(--white-color);
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+      z-index: 2;
+
+      @include media(xl) {
+        right: 0;
+      }
+
+      @include media(lg) {
+        top: 85%;
+        right: 15%;
+        z-index: 2;
+        text-align: center;
+      }
+
+      @include media(md) {
+        font-size: 16px;
+        line-height: 20px;
+        top: 90%;
+      }
+
+      @include media(sm) {
+        width: 23ch;
+        top: 82%;
+        right: 25%;
+      }
+
+      @media (max-width: 420px) {
+        top: 82%;
+        right: 15%;
+      }
+    }
+    &-one {
+      position: absolute;
+      top: 35%;
+
+      @include media(lg) {
+        position: absolute;
+        left: 10%;
+      }
+      @include media(sm) {
+        position: absolute;
+        left: 20%;
+      }
+
+      @media (max-width: 420px) {
+        left: 0;
+      }
+    }
+
+    &-two {
+      position: absolute;
+      top: 15%;
+      right: 5%;
+
+      @include media(lg) {
+        right: 10%;
+      }
+      @include media(sm) {
+        top: 20%;
+        right: 20%;
+      }
+      @media (max-width: 420px) {
+        right: 1%;
+      }
+    }
+  }
+}

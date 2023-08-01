@@ -1,0 +1,106 @@
+@use '../utils/mixins' as *;
+
+.accordion {
+  $this: &;
+
+  &__heading {
+    @include media(md) {
+      padding: 24px 0;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 36px 0;
+  }
+
+  &__title {
+    @include media(md) {
+      font-size: rem(20px);
+    }
+
+    font-size: rem(24px);
+    line-height: 133%;
+  }
+
+  &__item {
+    overflow: hidden;
+    border-bottom: 1px solid rgb(255 255 255 / 20%);
+
+    &:first-child {
+      border-top: 1px solid rgb(255 255 255 / 20%);
+    }
+  }
+
+  &__content {
+    max-height: 0;
+    transition: max-height 0.5s;
+  }
+
+  &__body {
+    @include media(md) {
+      padding-bottom: 24px;
+    }
+
+    padding-bottom: 36px;
+    font-weight: 300;
+    line-height: 150%;
+    color: var(--black-50);
+
+    ul {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: '';
+
+        display: block;
+
+        width: 2px;
+        height: 2px;
+        margin-right: 0.5rem;
+
+        background: currentcolor;
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+
+    &--active {
+      #{$this}__arrow {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__arrow {
+    display: flex;
+
+    svg {
+      transition: transform 0.5s;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
