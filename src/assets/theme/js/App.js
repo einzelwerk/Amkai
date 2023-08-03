@@ -10,3 +10,4 @@ import './Accordion';
 import './Tabs';
 import './Lang';
 import './Impressionen';
+import './Fancybox';

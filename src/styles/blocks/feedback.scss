@@ -1,7 +1,6 @@
 @use '../utils/mixins' as *;
 
 .feedback {
-  font-family: Lora;
   margin-top: 100px;
   margin-bottom: 100px;
   overflow: hidden;
@@ -18,6 +17,7 @@
   }
 
   &__title {
+    font-family: Lora;
     display: flex;
     justify-content: center;
     width: 50%;
@@ -50,7 +50,7 @@
     }
     &-second {
       position: relative;
-      height: 1080px;
+      height: 1225px;
 
       @include media(lg) {
         height: 710px;
@@ -87,7 +87,7 @@
     &-text {
       position: absolute;
       top: 0;
-      right: 5%;
+      right: 7%;
       width: 426px;
       height: 96px;
       color: var(--white-color);
@@ -140,7 +140,7 @@
     &-two {
       position: absolute;
       bottom: 10%;
-      right: 5%;
+      right: 7%;
 
       @include media(lg) {
         right: 10%;
@@ -157,7 +157,7 @@
   &__second {
     &-text {
       position: absolute;
-      bottom: 30%;
+      bottom: 19%;
       left: 5%;
       width: 426px;
       height: 96px;
@@ -195,6 +195,8 @@
       }
     }
     &-one {
+      position: absolute;
+      top: 15%;
       @include media(lg) {
         position: absolute;
         left: 10%;
@@ -207,7 +209,7 @@
 
     &-two {
       position: absolute;
-      bottom: 20%;
+      bottom: 10%;
       right: 10%;
 
       @include media(lg) {
@@ -224,8 +226,8 @@
 
     &-three {
       position: absolute;
-      right: 0;
-      top: 40%;
+      right: 7%;
+      top: 6%;
 
       @include media(lg) {
         top: 60%;
@@ -279,7 +281,8 @@
     }
     &-one {
       position: absolute;
-      top: 10%;
+      top: 13%;
+      z-index: 2;
       @include media(lg) {
         left: 0;
       }
@@ -324,8 +327,8 @@
   &__fourth {
     &-text {
       position: absolute;
-      bottom: 7%;
-      right: 7%;
+      bottom: 8%;
+      right: 8%;
       width: 426px;
       height: 96px;
       color: var(--white-color);
@@ -365,6 +368,7 @@
     &-one {
       position: absolute;
       top: 35%;
+      z-index: 2;
 
       @include media(lg) {
         position: absolute;
@@ -396,5 +400,33 @@
         right: 1%;
       }
     }
+  }
+}
+
+[data-fancybox-close] {
+  margin: 24px;
+}
+
+.fancybox__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.f-button.is-prev {
+  padding: 10px;
+
+  @include media(lg) {
+    display: none;
+  }
+}
+
+.f-button.is-next {
+  padding: 10px;
+
+  @include media(lg) {
+    display: none;
   }
 }

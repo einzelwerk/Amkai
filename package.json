@@ -51,6 +51,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.20",
     "swiper": "^8.4.4"
   }
 }
