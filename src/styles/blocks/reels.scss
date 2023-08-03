@@ -63,9 +63,20 @@
   &__gallery {
     max-width: 550px;
     min-width: 1px;
+    padding-inline: 2rem;
 
     @include media(lg) {
       min-width: 100%;
+    }
+  }
+
+  &__video {
+    width: 427px;
+    height: 759px;
+
+    @include media(md) {
+      width: 300px;
+      height: 534px;
     }
   }
 

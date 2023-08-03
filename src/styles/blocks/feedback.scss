@@ -259,7 +259,7 @@
       @include media(lg) {
         top: 75%;
         right: 15%;
-        z-index: 2;
+        z-index: 3;
         text-align: center;
       }
 
@@ -271,7 +271,7 @@
 
       @include media(sm) {
         width: 28ch;
-        top: 75%;
+        top: 79%;
         right: 25%;
       }
 
@@ -300,8 +300,9 @@
         right: 20%;
       }
       @include media(sm) {
-        top: 25%;
+        top: 28%;
         right: 20%;
+        z-index: 3;
       }
       @media (max-width: 420px) {
         right: 0;
@@ -318,8 +319,9 @@
       }
 
       @include media(sm) {
-        top: 50%;
+        top: 53%;
         right: 50%;
+        z-index: 4;
       }
     }
   }
@@ -335,7 +337,7 @@
       font-size: 24px;
       font-weight: 400;
       line-height: 32px;
-      z-index: 2;
+      z-index: 3;
 
       @include media(xl) {
         right: 0;
@@ -344,7 +346,7 @@
       @include media(lg) {
         top: 85%;
         right: 15%;
-        z-index: 2;
+        z-index: 3;
         text-align: center;
       }
 
@@ -356,12 +358,12 @@
 
       @include media(sm) {
         width: 23ch;
-        top: 82%;
+        top: 85%;
         right: 25%;
       }
 
       @media (max-width: 420px) {
-        top: 82%;
+        top: 85%;
         right: 15%;
       }
     }
@@ -381,6 +383,7 @@
 
       @media (max-width: 420px) {
         left: 0;
+        top: 37%;
       }
     }
 
