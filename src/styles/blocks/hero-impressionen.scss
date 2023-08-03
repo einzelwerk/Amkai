@@ -39,7 +39,13 @@
       width: 500%;
       gap: 24px;
       overflow: hidden;
-      animation: text 20s infinite linear;
+
+      &:nth-of-type(odd) {
+        animation: text 20s infinite linear;
+      }
+      &:nth-of-type(even) {
+        animation: text 14s infinite linear;
+      }
 
       @keyframes text {
         0% {
