@@ -39,6 +39,17 @@
       width: 500%;
       gap: 24px;
       overflow: hidden;
+      animation: text 20s infinite linear;
+
+      @keyframes text {
+        0% {
+          transform: translate(0, 0);
+        }
+
+        100% {
+          transform: translate(-10%, 0);
+        }
+      }
 
       @include media(lg) {
         gap: 16px;
@@ -62,17 +73,6 @@
       line-height: 100px;
       text-transform: uppercase;
       z-index: 2;
-      animation: text 8s infinite linear;
-
-      @keyframes text {
-        0% {
-          transform: translate(0, 0);
-        }
-
-        100% {
-          transform: translate(-150%, 0);
-        }
-      }
 
       @include media(lg) {
         font-size: 64px;
