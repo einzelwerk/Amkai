@@ -1,5 +1,4 @@
 /* eslint-disable */
-
 class TabsAutomatic {
   constructor(groupNode) {
     this.tablistNode = groupNode;
@@ -11,6 +10,7 @@ class TabsAutomatic {
 
     this.tabs = Array.from(this.tablistNode.querySelectorAll('[role=tab]'));
     this.tabpanels = [];
+    this.tabOffset = document.querySelector('.tabs-control').offsetTop;
 
     for (var i = 0; i < this.tabs.length; i += 1) {
       var tab = this.tabs[i];
@@ -33,9 +33,7 @@ class TabsAutomatic {
   }
 
   setSelectedTab(currentTab, setFocus) {
-    const tabOffset = currentTab.getBoundingClientRect().top + document.documentElement.scrollTop;
-    console.log(tabOffset);
-    if (window.scrollTop > tabOffset) window.scrollTo(0, tabOffset - 10);
+    window.scrollTo(0, this.tabOffset);
     if (typeof setFocus !== 'boolean') {
       setFocus = true;
     }
