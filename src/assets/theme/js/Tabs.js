@@ -33,7 +33,7 @@ class TabsAutomatic {
   }
 
   setSelectedTab(currentTab, setFocus) {
-    window.scrollTo(0, tabOffset);
+    window.scrollTo(0, this.tabOffset);
     if (typeof setFocus !== 'boolean') {
       setFocus = true;
     }
