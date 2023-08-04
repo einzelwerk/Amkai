@@ -7,6 +7,9 @@ $image-width: 390px;
     background: url('@/images/menu/bg-1.png');
     background-repeat: no-repeat;
     background-position: 16rem 100%;
+    @include media(md) {
+      background-position: 0 100%;
+    }
   }
   &:nth-child(3) {
     background: url('@/images/menu/bg-2.png');
