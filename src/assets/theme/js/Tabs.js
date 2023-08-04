@@ -1,4 +1,5 @@
 /* eslint-disable */
+
 class TabsAutomatic {
   constructor(groupNode) {
     this.tablistNode = groupNode;
@@ -32,6 +33,9 @@ class TabsAutomatic {
   }
 
   setSelectedTab(currentTab, setFocus) {
+    const tabOffset = currentTab.getBoundingClientRect().top + document.documentElement.scrollTop;
+    console.log(tabOffset);
+    if (window.scrollTop > tabOffset) window.scrollTo(0, tabOffset - 10);
     if (typeof setFocus !== 'boolean') {
       setFocus = true;
     }

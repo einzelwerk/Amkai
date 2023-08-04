@@ -86,8 +86,8 @@
   &__first {
     &-text {
       position: absolute;
-      top: 0;
-      right: 7%;
+      top: 1%;
+      right: 10%;
       width: 426px;
       height: 96px;
       color: var(--white-color);
@@ -123,12 +123,12 @@
       }
     }
     &-one {
+      position: absolute;
+      top: 1%;
       @include media(lg) {
-        position: absolute;
         left: 10%;
       }
       @include media(sm) {
-        position: absolute;
         left: 20%;
       }
 
@@ -159,7 +159,7 @@
       position: absolute;
       bottom: 19%;
       left: 5%;
-      width: 426px;
+      width: 364px;
       height: 96px;
       color: var(--white-color);
       font-size: 24px;
@@ -196,7 +196,7 @@
     }
     &-one {
       position: absolute;
-      top: 15%;
+      top: 14%;
       @include media(lg) {
         position: absolute;
         left: 10%;
@@ -243,7 +243,7 @@
     &-text {
       position: absolute;
       bottom: 0;
-      left: 5%;
+      left: 3%;
       width: 585px;
       color: var(--white-color);
       font-size: 24px;
@@ -311,8 +311,8 @@
 
     &-three {
       position: absolute;
-      right: 6.5%;
-      top: 60%;
+      right: 7.5%;
+      top: 59%;
 
       @include media(lg) {
         top: 50%;
@@ -325,12 +325,11 @@
       }
     }
   }
-
   &__fourth {
     &-text {
       position: absolute;
-      bottom: 8%;
-      right: 8%;
+      bottom: 10%;
+      right: 10%;
       width: 426px;
       height: 96px;
       color: var(--white-color);
@@ -389,8 +388,8 @@
 
     &-two {
       position: absolute;
-      top: 15%;
-      right: 5%;
+      top: 13%;
+      right: 7%;
 
       @include media(lg) {
         right: 10%;
