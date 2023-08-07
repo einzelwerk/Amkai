@@ -294,7 +294,7 @@
 
     &-two {
       position: absolute;
-      right: 17%;
+      right: 17.5%;
 
       @include media(lg) {
         right: 20%;
@@ -311,7 +311,7 @@
 
     &-three {
       position: absolute;
-      right: 7.5%;
+      right: 7%;
       top: 59%;
 
       @include media(lg) {
@@ -388,7 +388,7 @@
 
     &-two {
       position: absolute;
-      top: 13%;
+      top: 14%;
       right: 7%;
 
       @include media(lg) {
