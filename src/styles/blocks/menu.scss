@@ -2,7 +2,7 @@
 
 $image-width: 390px;
 
-.tabs-panel:first-child .menu-section {
+.tabs-panel:not(.is-hidden) .menu-section {
   &:nth-child(1) {
     background: url('@/images/menu/bg-1.png');
     background-repeat: no-repeat;
