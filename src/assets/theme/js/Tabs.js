@@ -10,7 +10,7 @@ class TabsAutomatic {
 
     this.tabs = Array.from(this.tablistNode.querySelectorAll('[role=tab]'));
     this.tabpanels = [];
-    this.tabOffset = document.querySelector('.tabs-control').offsetTop;
+    this.tabOffset = document.querySelector('.section-menu').offsetTop;
 
     for (var i = 0; i < this.tabs.length; i += 1) {
       var tab = this.tabs[i];
