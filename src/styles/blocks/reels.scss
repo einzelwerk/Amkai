@@ -9,13 +9,12 @@
   &__container {
     display: flex;
     gap: 100px;
-  }
-
-  @include media(lg) {
-    flex-direction: column;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    gap: 40px;
+    @include media(lg) {
+      flex-direction: column;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      gap: 40px;
+    }
   }
 
   &__content {
@@ -76,12 +75,21 @@
   }
 
   &__video {
+    position: relative;
     width: 427px;
     height: 759px;
 
     @include media(md) {
       width: 300px;
       height: 534px;
+    }
+
+    &-playBtn {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
     }
   }
 

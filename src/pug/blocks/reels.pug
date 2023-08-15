@@ -7,11 +7,17 @@ section.section.reels
             .reels__slider.swiper
                 .swiper-wrapper
                     .swiper-slide
-                        video.reels__video(src=require("@/videos/amkaivideo.mp4") loop='loop' controls muted preload='auto' controlslist='nodownload' playsinline) 
+                        video.reels__video(src=require("@/videos/amkaivideo.mp4") loop='loop' muted preload='auto' controlslist='nodownload' playsinline)
+                        svg.reels__video-playBtn(width='64' height='64')
+                            use(href='sprite.svg#play-btn_sprite')
                     .swiper-slide
-                        video.reels__video(src=require("@/videos/videoamkai.mp4") loop='loop' controls muted preload='auto' controlslist='nodownload' playsinline) 
+                        video.reels__video(src=require("@/videos/videoamkai.mp4") loop='loop' muted preload='auto' controlslist='nodownload' playsinline)
+                        svg.reels__video-playBtn(width='64' height='64')
+                            use(href='sprite.svg#play-btn_sprite') 
                     .swiper-slide
-                        video.reels__video(src=require("@/videos/amkaivideo.mp4") loop='loop' controls muted preload='auto' controlslist='nodownload' playsinline) 
+                        video.reels__video(src=require("@/videos/amkaivideo.mp4") loop='loop' muted preload='auto' controlslist='nodownload' playsinline)
+                        svg.reels__video-playBtn(width='64' height='64')
+                            use(href='sprite.svg#play-btn_sprite') 
                 .slider-navigation.slider-navigation--reels
                     .slider-navigation--reels__btn.slider-navigation__prev
                         svg(width='24' height='24')
