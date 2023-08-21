@@ -80,7 +80,7 @@
               <use xlink:href="sprite.svg#card_sprite"></use>
             </svg></span></a>
       </div>
-      <buttom class="header__btn btn btn--primary reservation" type="submit"><span class="btn__inner">Reservieren</span></buttom>
+      <button class="header__btn btn btn--primary reservation reservation--full" type="submit"><span class="btn__inner">Reservieren</span></button>
     </div>
   </div>
 </header>
@@ -165,33 +165,29 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <video class="reels__video" src="assets/theme/videos/amkaivideo.mp4" loop="loop" muted preload="auto" controlslist="nodownload" playsinline></video>
-            <svg class="reels__video-playBtn" width="64" height="64">
-              <use href="sprite.svg#play-btn_sprite"></use>
-            </svg>
+            <btn class="reels__video-playBtn"><img src="assets/theme/images/reels/play-btn.png"></btn>
           </div>
           <div class="swiper-slide">
             <video class="reels__video" src="assets/theme/videos/videoamkai.mp4" loop="loop" muted preload="auto" controlslist="nodownload" playsinline></video>
-            <svg class="reels__video-playBtn" width="64" height="64">
-              <use href="sprite.svg#play-btn_sprite"> </use>
-            </svg>
+            <btn class="reels__video-playBtn"><img src="assets/theme/images/reels/play-btn.png"></btn>
           </div>
           <div class="swiper-slide">
             <video class="reels__video" src="assets/theme/videos/amkaivideo.mp4" loop="loop" muted preload="auto" controlslist="nodownload" playsinline></video>
-            <svg class="reels__video-playBtn" width="64" height="64">
-              <use href="sprite.svg#play-btn_sprite"> </use>
-            </svg>
+            <btn class="reels__video-playBtn"><img src="assets/theme/images/reels/play-btn.png"></btn>
           </div>
         </div>
         <div class="slider-navigation slider-navigation--reels">
           <div class="slider-navigation--reels__btn slider-navigation__prev">
-            <svg width="24" height="24">
+            <btn>
+              <svg width="24" height="24"></svg>
               <use href="sprite.svg#arrow-prev_sprite"></use>
-            </svg>
+            </btn>
           </div>
           <div class="slider-navigation--reels__btn slider-navigation__next">
-            <svg width="24" height="24">
+            <btn>
+              <svg width="24" height="24"></svg>
               <use href="sprite.svg#arrow-next_sprite"></use>
-            </svg>
+            </btn>
           </div>
         </div>
       </div>

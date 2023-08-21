@@ -8,20 +8,22 @@ section.section.reels
                 .swiper-wrapper
                     .swiper-slide
                         video.reels__video(src=require("@/videos/amkaivideo.mp4") loop='loop' muted preload='auto' controlslist='nodownload' playsinline)
-                        svg.reels__video-playBtn(width='64' height='64')
-                            use(href='sprite.svg#play-btn_sprite')
+                        btn.reels__video-playBtn
+                            img(src=require('@/images/reels/play-btn.png'))
                     .swiper-slide
                         video.reels__video(src=require("@/videos/videoamkai.mp4") loop='loop' muted preload='auto' controlslist='nodownload' playsinline)
-                        svg.reels__video-playBtn(width='64' height='64')
-                            use(href='sprite.svg#play-btn_sprite') 
+                        btn.reels__video-playBtn
+                            img(src=require('@/images/reels/play-btn.png'))
                     .swiper-slide
                         video.reels__video(src=require("@/videos/amkaivideo.mp4") loop='loop' muted preload='auto' controlslist='nodownload' playsinline)
-                        svg.reels__video-playBtn(width='64' height='64')
-                            use(href='sprite.svg#play-btn_sprite') 
+                        btn.reels__video-playBtn
+                            img(src=require('@/images/reels/play-btn.png'))
                 .slider-navigation.slider-navigation--reels
                     .slider-navigation--reels__btn.slider-navigation__prev
-                        svg(width='24' height='24')
+                        btn
+                            svg(width='24' height='24')
                             use(href='sprite.svg#arrow-prev_sprite')
                     .slider-navigation--reels__btn.slider-navigation__next
-                        svg(width='24' height='24')
+                        btn
+                            svg(width='24' height='24')
                             use(href='sprite.svg#arrow-next_sprite')
