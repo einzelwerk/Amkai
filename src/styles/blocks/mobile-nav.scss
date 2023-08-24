@@ -34,7 +34,6 @@
 
   &__item {
     display: flex;
-    align-items: center;
     margin-bottom: 20px;
     font-size: rem(18px);
     font-weight: 500;
@@ -81,6 +80,7 @@
 .mobile-sub {
   display: none;
   padding-top: 16px;
+  padding-left: 12px;
 
   &__item {
     margin-bottom: 16px;
