@@ -9,10 +9,10 @@
     overflow: hidden;
   }
 
-  @include media(md) {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
+  // @include media(md) {
+  //   padding-top: 40px;
+  //   padding-bottom: 40px;
+  // }
 
   &__heading {
     display: flex;

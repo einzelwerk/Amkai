@@ -3,6 +3,10 @@
 .reels {
   padding-top: 100px;
   padding-bottom: 100px;
+  @include media(lg) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 
   background: #0b1820;
 
@@ -11,8 +15,6 @@
     gap: 100px;
     @include media(lg) {
       flex-direction: column;
-      padding-top: 40px;
-      padding-bottom: 40px;
       gap: 40px;
     }
   }
