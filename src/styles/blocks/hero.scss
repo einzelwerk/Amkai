@@ -10,6 +10,23 @@
 }
 
 .hero {
+  &-playerBtn {
+    position: absolute;
+    bottom: 95px;
+    right: 75px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    cursor: pointer;
+
+    &--play {
+      display: none;
+    }
+  }
+
   &__image {
     position: absolute;
     z-index: 0;
