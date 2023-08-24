@@ -22,6 +22,11 @@
     line-height: 24px;
     cursor: pointer;
 
+    @include media(md) {
+      bottom: 75%;
+      right: 25px;
+    }
+
     &--play {
       display: none;
     }
