@@ -49,17 +49,23 @@
   <div class="mobile-nav-wrapper" id="mobile-nav">
     <nav class="header__mobile-nav mobile-nav container">
       <ul class="mobile-nav__list"> 
-        <li class="mobile-nav__item"><a class="mobile-nav__link" href="/Amkai/">Home</a>
+        <li class="mobile-nav__item">
+          <div><a class="mobile-nav__link" href="/Amkai/">Home</a>
+          </div>
         </li>
-        <li class="mobile-nav__item mobile-nav__item--has-sub"><a class="mobile-nav__link" href="/Amkai/vacancy.html">Vacancy</a><span class="mobile-nav__arrow"> 
-            <svg width="16" height="16">
-              <use xlink:href="sprite.svg#caret_sprite"> </use>
-            </svg></span>
+        <li class="mobile-nav__item mobile-nav__item--has-sub">
+          <div><a class="mobile-nav__link" href="/Amkai/vacancy.html">Vacancy</a><span class="mobile-nav__arrow"> 
+              <svg width="16" height="16">
+                <use xlink:href="sprite.svg#caret_sprite"> </use>
+              </svg></span>
+          </div>
           <ul class="mobile-sub">
             <li class="mobile-sub__item"><a class="mobile-sub__link" href="/Amkai/vacancy-page.html">Vacancy</a></li>
           </ul>
         </li>
-        <li class="mobile-nav__item"><a class="mobile-nav__link" href="/Amkai/menu.html">Speisekarte</a>
+        <li class="mobile-nav__item">
+          <div><a class="mobile-nav__link" href="/Amkai/menu.html">Speisekarte</a>
+          </div>
         </li>
       </ul>
     </nav>
@@ -85,7 +91,15 @@
   </div>
 </header>
     <main class="main">
-<section class="section-hero"> 
+<section class="section-hero">
+  <button class="hero-playerBtn">
+    <svg class="hero-playerBtn--pause" width="24" height="24">
+      <use xlink:href="sprite.svg#hero-pause-btn_sprite"></use>
+    </svg>
+    <svg class="hero-playerBtn--play" width="24" height="24">
+      <use xlink:href="sprite.svg#hero-play-btn_sprite"></use>
+    </svg><span class="hero-playerBtn--text">pause video</span>
+  </button>
   <div class="hero">
     <picture class="hero__image"> <img src="assets/theme/images/hero/jobs.jpg" alt=""></picture>
     <div class="container hero__text-wrapper">
