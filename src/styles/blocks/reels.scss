@@ -108,6 +108,10 @@
     color: var(--white);
   }
 
+  .swiper-pagination-fraction {
+    width: max-content;
+  }
+
   .swiper-pagination-total {
     opacity: 0.5;
   }
