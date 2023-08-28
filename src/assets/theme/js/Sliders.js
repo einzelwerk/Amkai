@@ -66,7 +66,11 @@ class Sliders {
   static reels() {
     const root = document.querySelector('.reels__slider');
     const sliderInstance = new Swiper(root, {
-      modules: [Navigation, EffectCards],
+      modules: [Navigation, EffectCards, Pagination],
+      pagination: {
+        el: '.reels__numbers',
+        type: 'fraction',
+      },
       init: false,
       loop: true,
       effect: 'cards',
