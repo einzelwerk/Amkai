@@ -1,0 +1,68 @@
+@use '../utils/mixins' as *;
+
+.reviews-restaurant {
+  padding: 140px 220px;
+  margin: 0 auto;
+  background: #0c1921;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgba(168, 173, 176, 0.4);
+  border-bottom: 1px solid rgba(168, 173, 176, 0.4);
+
+  @include media(lg) {
+    padding: 40px 16px;
+  }
+
+  &__container {
+    display: flex;
+    gap: 200px;
+
+    @include media(lg) {
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+
+    &-stars {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+    }
+
+    &-rating {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+
+      @include media(lg) {
+        width: max-content;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+
+    @include media(lg) {
+      flex-direction: row;
+      gap: 24px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

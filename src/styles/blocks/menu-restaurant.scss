@@ -1,0 +1,119 @@
+@use '../utils/mixins' as *;
+
+.menu-restaurant {
+  padding: 100px 180px;
+  background: #0c1921;
+
+  @include media(lg) {
+    padding: 40px 16px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__picture {
+    width: 454px;
+    height: 387px;
+
+    @include media(lg) {
+      width: 300px;
+      height: 290px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+
+    &-title {
+      color: var(--white);
+      text-align: center;
+      font-family: Lora;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+    }
+
+    &-subtitle {
+      color: var(--white);
+      font-family: Lora;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      opacity: 0.6;
+    }
+  }
+
+  &__title {
+    font-family: Lora;
+    color: var(--white);
+    opacity: 0.6;
+    width: 655px;
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 100px;
+    text-align: center;
+
+    @include media(lg) {
+      font-size: 40px;
+      line-height: 40px;
+      width: 320px;
+    }
+  }
+
+  &__numbers {
+    display: flex;
+    margin: 0 28px;
+    font-family: Lora;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    gap: 4px;
+
+    .swiper-pagination-total {
+      opacity: 0.5;
+    }
+  }
+}
+.slider-navigation--menu {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 32px;
+}
+
+.menu-restaurant__slider {
+  overflow: hidden;
+  margin-top: -20px;
+
+  @include media(lg) {
+    margin-top: -9px;
+  }
+  .swiper-slide {
+    .menu-restaurant__content {
+      display: none;
+    }
+  }
+  .swiper-slide-active {
+    .menu-restaurant__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      width: 410px;
+
+      @include media(lg) {
+        width: 320px;
+      }
+    }
+  }
+}
