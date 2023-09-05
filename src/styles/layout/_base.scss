@@ -115,4 +115,9 @@ img {
   height: 60px;
   padding: 12px 80px;
   background: var(--white);
+  margin-top: 180px;
+
+  @include media(lg) {
+    margin-top: 90px;
+  }
 }
