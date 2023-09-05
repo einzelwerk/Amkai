@@ -107,3 +107,12 @@ img {
 .text-accent {
   color: var(--gold-color);
 }
+
+.btn-3dtour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 12px 80px;
+  background: var(--white);
+}
