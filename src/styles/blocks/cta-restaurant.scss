@@ -17,6 +17,24 @@
     }
   }
 
+  &__moreBtn {
+    background: var(--white-color);
+    color: #0c1921;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 12px 80px;
+    height: 60px;
+    cursor: pointer;
+
+    @include media(lg) {
+      width: 100%;
+    }
+  }
+
   &__content {
     background: #16222a;
     padding: 30px 60px 30px 30px;
@@ -43,24 +61,6 @@
     &-btn {
       @include media(lg) {
         width: 100%;
-      }
-
-      & > button {
-        background: var(--white-color);
-        color: #0c1921;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 24px;
-        padding: 12px 80px;
-        height: 60px;
-        cursor: pointer;
-
-        @include media(lg) {
-          width: 100%;
-        }
       }
     }
 
