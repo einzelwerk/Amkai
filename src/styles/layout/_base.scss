@@ -133,4 +133,7 @@ img {
   .col {
     margin: 250px auto 0 auto;
   }
+  &::after {
+    opacity: 0.4;
+  }
 }
