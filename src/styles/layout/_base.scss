@@ -116,11 +116,21 @@ img {
   padding: 12px 80px;
   background: #fff;
   color: #0c1921;
-  margin-top: 280px;
+  margin-top: 180px;
   font-size: 16px;
   font-weight: 500;
 
   @include media(lg) {
     margin-top: 90px;
+  }
+}
+
+.section-3dtour--restaurant {
+  padding: 36px 16px;
+}
+
+.section-3dtour--restaurant {
+  .col {
+    margin: 250px auto;
   }
 }
