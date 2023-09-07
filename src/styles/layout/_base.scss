@@ -134,6 +134,10 @@ img {
     margin: 250px auto 0 auto;
   }
   &::after {
-    opacity: 0.4;
+    opacity: 0.2;
   }
+}
+
+.reviews-restaurant + .section-faq {
+  background: #0c1921;
 }
