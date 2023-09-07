@@ -7,7 +7,7 @@
 
   &__container {
     position: relative;
-    padding-bottom: 350px;
+    padding-bottom: 300px;
   }
 
   @include media(lg) {
@@ -106,8 +106,8 @@
 
     @include media(lg) {
       line-height: 20px;
-      width: 320px;
-      bottom: 40px;
+      width: 328px;
+      bottom: 10px;
     }
 
     @media (max-width: 576px) {
