@@ -141,3 +141,7 @@ img {
 .alias-restaurant {
   background: #0c1921;
 }
+
+.alias-restaurant + .section-heading__title {
+  color: var(--white);
+}
