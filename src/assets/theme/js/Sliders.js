@@ -94,7 +94,7 @@ class Sliders {
         el: '.reels__numbers',
         type: 'fraction',
       },
-      init: true,
+      init: false,
       loop: true,
       effect: 'cards',
       grabCursor: true,
