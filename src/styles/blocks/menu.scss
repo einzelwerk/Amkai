@@ -3,6 +3,7 @@
 $image-width: 390px;
 
 .tabs-panel#dinnerkarte .menu-section {
+  background-size: contain;
   &:nth-child(1) {
     background: url('@/images/menu/bg-1.png');
     background-repeat: no-repeat;
