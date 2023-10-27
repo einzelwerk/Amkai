@@ -1,7 +1,13 @@
-section.section-hero 
+section.section-hero
+  button.hero-playerBtn
+    svg.hero-playerBtn--pause(width="24" height="24")
+      use(xlink:href="sprite.svg#hero-pause-btn_sprite")
+    svg.hero-playerBtn--play(width="24" height="24")
+      use(xlink:href="sprite.svg#hero-play-btn_sprite")
+    span.hero-playerBtn--text pause video
   .hero
     if heroVideo
-      video.hero__video(src="https://amkai.hamburg/assets/userfiles/videos/amkai-teaser.mp4" autoplay muted loop) 
+      video.hero__video(src="https://amkai.hamburg/assets/userfiles/videos/amkai-teaser.mp4" autoplay muted loop playsinline) 
     else
       picture.hero__image 
         img(src=require('@/images/hero/jobs.jpg'), alt="")

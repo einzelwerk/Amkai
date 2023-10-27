@@ -1,0 +1,45 @@
+section.menu-restaurant 
+    .menu-restaurant__top
+        h2.menu-restaurant__title Beliebteste Gerichte
+    .menu-restaurant__slider.swiper 
+        .swiper-wrapper 
+            .swiper-slide 
+                .menu-restaurant__item
+                    picture.menu-restaurant__picture
+                        img(src=require("@/images/restaurant/menu-1.png") alt="Meal 1")
+                    .menu-restaurant__content
+                        .menu-restaurant__item-title 
+                            | Tuna&nbsp;
+                            span.text-accent Tartar
+                        .menu-restaurant__item-subtitle Der Soja-, Chili- und Limettensaft verstärkt und unterstreicht den reinen und seidigen Geschmack des Thunfischs.
+            .swiper-slide 
+                .menu-restaurant__item
+                    picture.menu-restaurant__picture
+                        img(src=require("@/images/restaurant/menu-2.png") alt="Meal 2")
+                    .menu-restaurant__content
+                        .menu-restaurant__item-title 
+                            | Tuna&nbsp;
+                            span.text-accent Tartar
+                        .menu-restaurant__item-subtitle Der Soja-, Chili- und Limettensaft verstärkt und unterstreicht den reinen und seidigen Geschmack des Thunfischs.
+            .swiper-slide 
+                .menu-restaurant__item
+                    picture.menu-restaurant__picture
+                        img(src=require("@/images/restaurant/menu-3.png") alt="Meal 3")
+                    .menu-restaurant__content
+                        .menu-restaurant__item-title 
+                            | Tuna&nbsp;
+                            span.text-accent Tartar
+                        .menu-restaurant__item-subtitle Der Soja-, Chili- und Limettensaft verstärkt und unterstreicht den reinen und seidigen Geschmack des Thunfischs.
+        .slider-navigation.slider-navigation--menu
+            .slider-navigation--menu__btn.slider-navigation__prev
+                button
+                    svg(width='30' height='30')
+                        use(href='sprite.svg#arrow-prev_sprite')
+            .menu-restaurant__numbers
+                span.menu-restaurant__numbers--current 1
+                span &nbsp;/&nbsp;
+                span.menu-restaurant__numbers--total 7
+            .slider-navigation--menu__btn.slider-navigation__next
+                button
+                    svg(width='30' height='30')
+                        use(href='sprite.svg#arrow-next_sprite')

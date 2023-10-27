@@ -6,7 +6,7 @@
   }
 
   position: fixed;
-  top: var(--header-height);
+  top: 85px;
   left: 0;
   transform: translateX(100%);
 
@@ -16,7 +16,7 @@
   justify-content: space-between;
 
   width: 100%;
-  height: calc(100% - var(--header-height));
+  height: calc(100% - 85px);
   max-height: 100vh;
   padding-top: 15px;
 
@@ -33,12 +33,18 @@
   margin: 0;
 
   &__item {
+    display: flex;
     margin-bottom: 20px;
     font-size: rem(18px);
     font-weight: 500;
 
     &:last-child {
       margin: 0;
+    }
+
+    &--has-sub {
+      flex-direction: column;
+      width: max-content;
     }
   }
 
@@ -73,7 +79,7 @@
 
 .mobile-sub {
   display: none;
-  padding-top: 16px;
+  padding-top: rem(16px);
   padding-left: 12px;
 
   &__item {

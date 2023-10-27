@@ -1,0 +1,70 @@
+@use '../utils/mixins' as *;
+
+.facts-restaurant {
+  padding-top: 100px;
+  padding-bottom: 80px;
+  background: #0c1921;
+
+  @include media(lg) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    @include media(lg) {
+      gap: 24px;
+    }
+  }
+
+  &__desktop {
+    display: flex;
+    gap: 30px;
+
+    @include media(lg) {
+      display: none;
+    }
+  }
+
+  &__mobile {
+    display: none;
+
+    @include media(lg) {
+      display: block;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 18px 24px 24px;
+    width: 300px;
+    height: 200px;
+    justify-content: space-between;
+    font-family: Lora;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+
+    @media screen and (max-width: 1300px) {
+      padding: 8px;
+      width: 230px;
+      flex-wrap: wrap;
+    }
+
+    @include media(lg) {
+      padding: 0;
+      gap: 32px;
+      align-items: flex-start;
+      justify-content: unset;
+      height: 125px;
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+}

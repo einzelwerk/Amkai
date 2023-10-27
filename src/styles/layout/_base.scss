@@ -103,3 +103,45 @@ img {
 .is-hidden {
   display: none;
 }
+
+.text-accent {
+  color: var(--gold-color);
+}
+
+.btn-3dtour-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 12px 80px;
+  background: #fff;
+  color: #0c1921;
+  margin-top: 180px;
+  font-size: 16px;
+  font-weight: 500;
+
+  @include media(lg) {
+    margin-top: 90px;
+  }
+}
+
+.section-3dtour--restaurant {
+  padding: 36px 16px;
+}
+
+.section-3dtour--restaurant {
+  .col {
+    margin: 250px auto 0 auto;
+  }
+  &::after {
+    opacity: 0.2;
+  }
+}
+
+.alias-restaurant {
+  background: #0c1921;
+}
+
+.alias-restaurant .section-heading__title {
+  color: #fff;
+}

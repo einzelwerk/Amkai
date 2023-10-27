@@ -1,7 +1,7 @@
 export default {
       id: "vegan_sprite-usage",
       viewBox: "0 0 24 24",
-      url: __webpack_public_path__ + "C:\\projects\\Amkai2\\src\\assets\\theme\\icons\\vegan_sprite.svg",
+      url: __webpack_public_path__ + "F:\\einzelwerk\\Amkai\\src\\assets\\theme\\icons\\vegan_sprite.svg",
       toString: function () {
         return this.url;
       }

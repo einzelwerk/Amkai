@@ -11,3 +11,5 @@ import './Tabs';
 import './Lang';
 import './Impressionen';
 import './Fancybox';
+import './ReelsVideoPlayer';
+import './HeroVideoPlayer';
