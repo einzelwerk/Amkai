@@ -1,7 +1,7 @@
 export default {
       id: "arrow-l_sprite-usage",
       viewBox: "0 0 30 12",
-      url: __webpack_public_path__ + "F:\\einzelwerk\\Amkai\\src\\assets\\theme\\icons\\arrow-l_sprite.svg",
+      url: __webpack_public_path__ + "C:\\projects\\Amkai2\\src\\assets\\theme\\icons\\arrow-l_sprite.svg",
       toString: function () {
         return this.url;
       }
