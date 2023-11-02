@@ -20,7 +20,8 @@ $image-width: 390px;
   &:nth-child(4) {
     background: url('@/images/menu/bg-3.png');
     background-repeat: no-repeat;
-    background-position: right bottom;
+    background-position: left bottom;
+    background-size: contain;
   }
   &:nth-child(7) {
     background: url('@/images/menu/bg-4.png');
