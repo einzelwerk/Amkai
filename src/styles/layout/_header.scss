@@ -18,6 +18,9 @@
 
   &.menu-open {
     background: var(--background);
+    .header__lang-switcher {
+      display: none;
+    }
   }
 
   &.fixed {
@@ -28,6 +31,9 @@
 
   &__lang-switcher {
     margin-left: 1rem;
+    .lang__content {
+      border: none;
+    }
   }
 
   &__lang {
