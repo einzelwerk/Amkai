@@ -121,16 +121,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  & > picture {
-    @media (min-width: 576px) and (max-width: 1025px) {
-      width: 50%;
-    }
-
-    @media (max-width: 575px) {
-      width: 80%;
-    }
-  }
 }
 
 .slider-navigation--reels {

@@ -3,11 +3,12 @@
 $image-width: 390px;
 
 .tabs-panel#dinnerkarte .menu-section {
-  background-size: contain;
+  background-size: 150px;
   &:nth-child(1) {
     background: url('@/images/menu/bg-1.png');
     background-repeat: no-repeat;
     background-position: 16rem 100%;
+    background-size: 150px;
     @include media(md) {
       background-position: 0 100%;
     }
@@ -16,17 +17,19 @@ $image-width: 390px;
     background: url('@/images/menu/bg-2.png');
     background-repeat: no-repeat;
     background-position: right 80%;
+    background-size: 150px;
   }
-  &:nth-child(4) {
+  &:nth-child(5) {
     background: url('@/images/menu/bg-3.png');
     background-repeat: no-repeat;
     background-position: left bottom;
-    background-size: contain;
+    background-size: 150px;
   }
   &:nth-child(7) {
     background: url('@/images/menu/bg-4.png');
     background-repeat: no-repeat;
     background-position: right bottom;
+    background-size: 150px;
   }
 }
 
