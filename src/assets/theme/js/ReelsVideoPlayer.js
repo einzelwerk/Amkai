@@ -3,6 +3,9 @@ playButton.forEach((el) => {
   const elem = el;
   elem.addEventListener('click', () => {
     const video = elem.closest('.swiper-slide').querySelector('video');
+    video.addEventListener('click', (e) => {
+      e.preventDefault();
+    });
     if (!video.playing) {
       video.play();
       video.setAttribute('controls', true);
