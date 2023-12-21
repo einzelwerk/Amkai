@@ -43,6 +43,11 @@ module.exports = {
       return `${filepath}/[name][ext][query]`;
     },
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
   plugins: [
     ...filenames.map((file) => {
       console.log(file);
