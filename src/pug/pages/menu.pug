@@ -15,6 +15,21 @@ block content
           span.tabs-control__text Weinkarte
     #Dinnerkarte.tabs-panel.container(role='tabpanel' tabindex='0' aria-labelledby='Dinnerkarte')
       .menu
+        .menu-section
+          .menu__title-wrapper 
+            h2.menu__title
+              span  DEGUSTATIONS MENÜ
+            p.menu__subdescription 5 Gänge (ohne Entenleber) 109,- / 6 Gänge 129,- / nur tischweise buchbar bis 20:30 Uhr Inklusive Amuse Gueule & Freshmaker
+          .menu-grid.menu-grid--1-col.menu-grid--center.menu-grid--fish-background
+            each val in [1,2,3,4,5,6]
+              .menu-grid__item.menu-item.menu-item--no-padding
+                .menu-item__heading.menu-item__heading--center
+                  h3.menu-item__name ROTBARBE „GEFLÄMMT“
+                .menu-grid__ingredients.menu-ingredients
+                  span.menu-ingredients__item Tequila/
+                  span.menu-ingredients__item Mezcal/
+                  span.menu-ingredients__item Mango/
+                  span.menu-ingredients__item Lime/
         .menu-section 
           .menu__title-wrapper
             h2.menu__title
