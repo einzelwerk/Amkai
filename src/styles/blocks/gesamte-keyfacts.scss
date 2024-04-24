@@ -1,0 +1,80 @@
+@use '../utils/mixins' as *;
+
+.gesamte-keyfacts {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__heading,
+  &__desc {
+    max-width: 842px;
+    width: 100%;
+  }
+
+  &__heading {
+    font-size: 40px;
+    line-height: 125%;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 16px;
+
+    @include media(md) {
+      font-size: 32px;
+    }
+  }
+  &__desc {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    margin-bottom: 60px;
+
+    @include media(md) {
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+  }
+  &__heading-yellow {
+    color: #9b8164;
+  }
+
+  &__ul {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    background-color: #9b8164;
+    border-radius: 24px;
+    padding: 40px 20px;
+    max-width: 1290px;
+    width: 100%;
+    gap: 65px;
+
+    @include media(md) {
+      flex-direction: column;
+      padding: 16px 12px;
+      gap: 49px;
+    }
+  }
+
+  &__li {
+    max-width: 306px;
+    width: 100%;
+    position: relative;
+  }
+
+  &__li-title {
+    font-size: 16px;
+    line-height: 150%;
+    color: #d9c1a7;
+  }
+  &__li-desc {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 133%;
+
+    @include media(md) {
+      font-size: 20px;
+    }
+  }
+}

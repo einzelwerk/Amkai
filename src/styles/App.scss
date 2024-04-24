@@ -69,5 +69,8 @@
 @use 'blocks/reviews-restaurant';
 @use 'blocks/menu-restaurant';
 @use 'blocks/owner-quote';
-@use 'blocks/location-event';
-@use 'blocks/request-form';
+@use 'blocks/gesamte-keyfacts.scss';
+@use 'blocks/gesamte-location.scss';
+@use 'blocks/gesamte-companies.scss';
+@use 'blocks/gesamte-grid.scss';
+@use 'blocks/separee-grid.scss';
