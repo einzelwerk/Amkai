@@ -1,8 +1,9 @@
 extends ../layouts/main
 
 block content
-
-  include ../blocks/hero
+  - locals.heroVideo = true
+  - locals.heroIndex = true
+  include ../blocks/amkai-club-hero
   include ../blocks/amkai-club-location
   include ../blocks/amkai-club-grid
   include ../blocks/equipment

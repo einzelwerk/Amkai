@@ -1,7 +1,9 @@
 extends ../layouts/main
 
 block content 
- include ../blocks/hero
+ - locals.heroVideo = true
+ - locals.heroIndex = true
+ include ../blocks/eventlocation-hero.pug
  include ../blocks/location-event.pug
  include ../blocks/reviews
  include ../blocks/request-form
