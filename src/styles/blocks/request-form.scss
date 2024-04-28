@@ -79,6 +79,14 @@
         display: flex;
         flex-direction: column;
 
+        .radios {
+          display: flex;
+          align-items: center;
+          gap: 24px;
+          flex-wrap: wrap;
+          margin-bottom: 24px;
+        }
+
         .main-form__item {
           padding-top: 20px;
           padding-bottom: 16px;
