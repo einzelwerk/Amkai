@@ -13,3 +13,4 @@ import './Impressionen';
 import './Fancybox';
 import './ReelsVideoPlayer';
 import './HeroVideoPlayer';
+import './TabsContent';

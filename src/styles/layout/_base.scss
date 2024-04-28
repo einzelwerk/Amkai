@@ -178,3 +178,11 @@ img {
     }
   }
 }
+
+.tab-content {
+  display: none;
+
+  &.active {
+    display: block !important;
+  }
+}

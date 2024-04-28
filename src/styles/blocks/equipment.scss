@@ -54,10 +54,6 @@
     display: none;
     font-family: "Lora", sans-serif;
 
-    &.active {
-      display: block;
-    }
-
     @media (max-width: 769px) {
       margin-top: 24px;
     }
