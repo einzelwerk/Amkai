@@ -147,11 +147,15 @@
       font-size: rem(40px);
       font-weight: 400;
       margin-bottom: 12px;
+      max-width: 100%;
+      width: 100%;
     }
 
     font-weight: 500;
     font-size: rem(96px);
     margin-bottom: 24px;
+    max-width: 80%;
+    width: 100%;
 
     span {
       @include media(md) {
