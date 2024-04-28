@@ -7,12 +7,18 @@ heroPlayButton.forEach((el) => {
       video.play();
       document.querySelector('.hero-playerBtn--play').style.display = 'none';
       document.querySelector('.hero-playerBtn--pause').style.display = 'block';
-      document.querySelector('.hero-playerBtn--text').textContent = 'pause video';
+
+      if (document.querySelector('.hero-playerBtn--text')) {
+        document.querySelector('.hero-playerBtn--text').textContent = 'pause video';
+      }
     } else {
       video.pause();
       document.querySelector('.hero-playerBtn--play').style.display = 'block';
       document.querySelector('.hero-playerBtn--pause').style.display = 'none';
-      document.querySelector('.hero-playerBtn--text').textContent = 'play video';
+
+      if (document.querySelector('.hero-playerBtn--text')) {
+        document.querySelector('.hero-playerBtn--text').textContent = 'play video';
+      }
     }
   });
 });

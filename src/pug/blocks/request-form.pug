@@ -1,0 +1,77 @@
+section.request.section.section--s
+    .container 
+        .request-inner 
+            .request-info
+                .request-info__content 
+                    h4 Wir freuen uns auf Ihre Event-Anfrage!
+                    p Rufen Sie uns für Ihre Event-Anfrage einfach unter 040 380 377 30 an oder senden Sie Ihre Anfrage bequem online über unser Formular.
+                .request-info__user
+                    img.request-info__user-img(src=require(`@/images/user.png`))
+                    .request-info__user-content 
+                        p Natascha Mataruga
+                        p Ansprechpartnerin Events
+                        .request-info__user-contact
+                            img(src=require(`@/images/phone.svg`))
+                            a(href="tel:+04038037730") 040 380 377 30
+                        .request-info__user-contact
+                            img(src=require(`@/images/message.svg`))
+                            a(href="mailto:jobs@amkai.hamburg") jobs@amkai.hamburg
+
+            form.request-form
+                .request-form__inputs 
+                    .radios
+                        .radioBtn
+                            input(id="1" name="group" type="radio" checked="true") 
+                            label(for="1")
+                                div 
+                                p Frau
+                        .radioBtn
+                            input(id="2" name="group" type="radio") 
+                            label(for="2")
+                                div 
+                                p Frau
+                        .radioBtn
+                            input(id="3" name="group" type="radio") 
+                            label(for="3")
+                                div 
+                                p Frau
+
+                    .main-form__item 
+                        input.main-form__input(type="text" placeholder=" ")
+                        label.main-form__label(for="main-form-email") Vorname und Nachname*
+                    .main-form__item 
+                        input.main-form__input(type="text" placeholder=" ")
+                        label.main-form__label(for="main-form-email") E-Mail
+                    .main-form__item 
+                        input.main-form__input(type="text" placeholder=" ")
+                        label.main-form__label(for="main-form-email") Telefon*
+                    .main-form__item 
+                        input.main-form__input(type="text" placeholder=" ")
+                        label.main-form__label(for="main-form-email") Event-Anlass*
+                    .main-form__item 
+                        input.main-form__input(type="text" placeholder=" ")
+                        label.main-form__label(for="main-form-email") Personenanzahl*
+                    .main-form__item 
+                        input.main-form__input(type="text" placeholder=" ")
+                        label.main-form__label(for="main-form-email") Wunschtermin*
+                    .main-form__item 
+                        input.main-form__input(type="text" placeholder=" ")
+                        label.main-form__label(for="main-form-email") Alternativtermin
+                    .main-form__item 
+                        input.main-form__input(type="text" placeholder=" ")
+                        label.main-form__label(for="main-form-email") Uhrzeit Beginn*
+                    .main-form__item 
+                        input.main-form__input(type="text" placeholder=" ")
+                        label.main-form__label(for="main-form-email") Uhrzeit Ende*
+                    .main-form__item 
+                        input.main-form__input(type="text" placeholder=" ")
+                        label.main-form__label(for="main-form-email") Wie sind Sie auf uns aufmerksam geworden?*
+                    .cta-form__checkbox.checkbox
+                        label.checkbox__label(for="cta-form-checkbox") 
+                            input#cta-form-checkbox.checkbox__input(type="checkbox")
+                            .checkbox__fake
+                        .checkbox__desc
+                            label.checkbox__label(for='cta-form-checkbox')
+                                p Ich akzeptiere die Datenschutzerklärung. *
+
+                    button.main-btn.active Anfrage absenden

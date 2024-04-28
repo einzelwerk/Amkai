@@ -126,6 +126,20 @@ class Sliders {
     });
     sliderInstance.init();
   }
+
+  static about() {
+    const root = document.querySelector('.about__videos-slider');
+    const sliderInstance = new Swiper(root, {
+      init: false, 
+      slidesPerView: 2.2,
+      spaceBetween: 16,
+      loop: true,
+      slidesOffsetBefore: 16,
+      slidesOffsetAfter: 16
+    });
+
+    sliderInstance.init();
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -134,4 +148,5 @@ document.addEventListener('DOMContentLoaded', () => {
   Sliders.reels();
   Sliders.facts();
   Sliders.menu();
+  Sliders.about();
 });

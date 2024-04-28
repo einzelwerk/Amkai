@@ -1,0 +1,22 @@
+section.new-section-hero
+  button.new-hero-playerBtn.hero-playerBtn
+    svg.new-hero-playerBtn--pause.hero-playerBtn--pause(width="24" height="24")
+      use(xlink:href="sprite.svg#hero-pause-btn_sprite")
+    svg.new-hero-playerBtn--play.hero-playerBtn--play(width="24" height="24")
+      use(xlink:href="sprite.svg#hero-play-btn_sprite")
+  .new-hero
+    if heroVideo
+      video.new-hero__video(src="https://amkai.hamburg/assets/userfiles/videos/amkai-teaser.mp4" autoplay muted loop playsinline) 
+    else
+      picture.new-hero__image 
+        img(src=require('@/images/hero/separee.jpg'), alt="")
+    if heroIndex
+      .container.new-hero-index 
+        h2.new-hero-index__suptitle 40-80 Personen
+        h1.new-hero-index__title Separee
+        p.new-hero-index__text Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500
+    else
+      .container.new-hero__text-wrapper
+        .new-hero__text
+          h1.new-hero__title  Jobs mit guten Aussichten
+          h1.new-hero__desc  Auf zu neuen Ufern: Dein Arbeitsplatz direkt am Elbufer, mit offenem Blick auf den Hafen. Wir freuen uns auf deine Bewerbung!

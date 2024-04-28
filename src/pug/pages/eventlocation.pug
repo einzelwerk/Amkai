@@ -1,0 +1,11 @@
+extends ../layouts/main
+
+block content 
+ - locals.heroVideo = true
+ - locals.heroIndex = true
+ include ../blocks/eventlocation-hero.pug
+ include ../blocks/location-event.pug
+ include ../blocks/reviews
+ include ../blocks/request-form
+ include ../blocks/accordion
+ include ../blocks/cta

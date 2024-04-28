@@ -1,0 +1,16 @@
+section.section.section--m.container 
+  - locals.left = true
+  .separee-grid__container
+    .separee-grid 
+      each val in [1,2,3,4]
+        .separee-grid__item
+          picture.separee-grid__image 
+            img(src=require(`@/images/separee-grid/${val}.jpg`), alt="")
+    .separee-grid__buttons
+      button.main-btn.active.separee-grid__button
+        img(src=require("@/icons/play.svg") alt="play")
+        | VIdeo anchauen
+      |             
+      button.main-btn.separee-grid__button
+        img(src=require("@/icons/3d-modeling.svg") alt="3d-modeling")
+        |  zur 3d Tour
