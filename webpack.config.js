@@ -19,7 +19,7 @@ module.exports = {
   devtool: isDev ? 'source-map' : false,
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, 'docs'),
     },
     historyApiFallback: true,
     open: true,
@@ -36,7 +36,7 @@ module.exports = {
     },
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, './docs'),
     filename: 'assets/theme/[name].js',
     assetModuleFilename: (pathData) => {
       const filepath = path.dirname(pathData.filename).split('/').slice(1).join('/');

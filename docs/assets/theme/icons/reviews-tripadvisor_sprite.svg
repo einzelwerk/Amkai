@@ -1,8 +1,0 @@
-export default {
-      id: "reviews-tripadvisor_sprite-usage",
-      viewBox: "0 0 247 53",
-      url: __webpack_public_path__ + "C:\\Users\\terya\\OneDrive\\Desktop\\Amkai\\src\\assets\\theme\\icons\\reviews-tripadvisor_sprite.svg",
-      toString: function () {
-        return this.url;
-      }
-    }
