@@ -1,0 +1,8 @@
+export default {
+      id: "play-btn_sprite-usage",
+      viewBox: "0 0 65 66",
+      url: __webpack_public_path__ + "C:\\Users\\terya\\OneDrive\\Desktop\\Amkai\\src\\assets\\theme\\icons\\play-btn_sprite.svg",
+      toString: function () {
+        return this.url;
+      }
+    }
