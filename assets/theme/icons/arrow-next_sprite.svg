@@ -1,7 +1,7 @@
 export default {
       id: "arrow-next_sprite-usage",
       viewBox: "0 0 30 30",
-      url: __webpack_public_path__ + "C:\\Users\\terya\\OneDrive\\Desktop\\Amkai\\src\\assets\\theme\\icons\\arrow-next_sprite.svg",
+      url: __webpack_public_path__ + "D:\\Проекты\\Amkai\\src\\assets\\theme\\icons\\arrow-next_sprite.svg",
       toString: function () {
         return this.url;
       }

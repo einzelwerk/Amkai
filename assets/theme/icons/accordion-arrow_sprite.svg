@@ -1,7 +1,7 @@
 export default {
       id: "accordion-arrow_sprite-usage",
       viewBox: "0 0 32 32",
-      url: __webpack_public_path__ + "C:\\Users\\terya\\OneDrive\\Desktop\\Amkai\\src\\assets\\theme\\icons\\accordion-arrow_sprite.svg",
+      url: __webpack_public_path__ + "D:\\Проекты\\Amkai\\src\\assets\\theme\\icons\\accordion-arrow_sprite.svg",
       toString: function () {
         return this.url;
       }
