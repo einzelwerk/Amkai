@@ -167,6 +167,10 @@ img {
   &.active {
     color: #fff;
     background-color: var(--gold-color);
+
+    svg path {
+      stroke: #fff;
+    }
   }
 
   &:hover {

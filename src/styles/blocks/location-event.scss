@@ -1,107 +1,116 @@
-.location-event__list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+.location-event {
 
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
+  @media(min-width: 1024px) {
+    padding-top: 140px;
+  }  
 
-  .location-event__item {
-    position: relative;
-    width: 100%;
-
-    min-height: 307px;
-
-    &.with-content {
-      display: flex;
-      flex-direction: column;
-
-      h6 {
-        font-size: 16px;
-        color: var(--gold-color);
-
-        @media (max-width: 769px) {
-          font-size: 1rem;
-        }
-      }
-
-      h4 {
-        font-size: 40px;
-        font-weight: 500;
-        margin-top: 8px;
-
-        @media (max-width: 769px) {
-          font-size: 2rem;
-        }
-
-        span {
-          color: var(--gold-color);
-        }
-      }
-
-      p {
-        font-size: 20px;
-        line-height: 150%;
-        margin-top: 24px;
-
-        @media (max-width: 769px) {
-          font-size: 1rem;
-        }
-      }
-
-      .location-event__item-footer {
+  .location-event__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  
+    .location-event__item {
+      position: relative;
+      width: 100%;
+      font-family: "Lora", sans-serif;
+  
+      min-height: 307px;
+  
+      &.with-content {
         display: flex;
-        align-items: center;
-        gap: 20px;
-        margin-top: 48px;
-        flex-wrap: wrap;
-
-        button {
+        flex-direction: column;
+  
+        h6 {
+          font-size: 16px;
+          color: var(--gold-color);
+  
+          @media (max-width: 769px) {
+            font-size: 1rem;
+          }
+        }
+  
+        h4 {
+          font-size: 40px;
+          font-weight: 500;
+          margin-top: 8px;
+  
+          @media (max-width: 769px) {
+            font-size: 2rem;
+          }
+  
+          span {
+            color: var(--gold-color);
+          }
+        }
+  
+        p {
+          font-size: 20px;
+          line-height: 150%;
+          margin-top: 24px;
+  
+          @media (max-width: 769px) {
+            font-size: 1rem;
+          }
+        }
+  
+        .location-event__item-footer {
           display: flex;
-          
-          @media(max-width: 769px) {
-            width: 100%;
+          align-items: center;
+          gap: 20px;
+          margin-top: 48px;
+          flex-wrap: wrap;
+  
+          button {
+            display: flex;
+            
+            @media(max-width: 769px) {
+              width: 100%;
+            }
           }
         }
       }
-    }
-
-    .location-event__item-content {
-      font-family: 'Lora', sans-serif;
-      position: absolute;
-      left: 30px;
-      bottom: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-
-      h5 {
-        font-size: 40px;
-        line-height: 125%;
-
-        @media (max-width: 769px) {
-          font-size: 2rem;
+  
+      .location-event__item-content {
+        font-family: 'Lora', sans-serif;
+        position: absolute;
+        left: 30px;
+        bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+  
+        h5 {
+          font-size: 40px;
+          line-height: 125%;
+  
+          @media (max-width: 769px) {
+            font-size: 2rem;
+          }
+        }
+  
+        span {
+          font-size: 16px;
+          font-weight: 500;
+          text-decoration: underline;
+  
+          @media (max-width: 769px) {
+            font-size: 1rem;
+          }
         }
       }
-
-      span {
-        font-size: 16px;
-        font-weight: 500;
-        text-decoration: underline;
-
-        @media (max-width: 769px) {
-          font-size: 1rem;
+  
+      &:last-child {
+        grid-column: 2 span;
+  
+        @media(max-width: 769px) {
+          grid-column: 1 span;
         }
-      }
-    }
-
-    &:last-child {
-      grid-column: 2 span;
-
-      @media(max-width: 769px) {
-        grid-column: 1 span;
       }
     }
   }
+  
 }

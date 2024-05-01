@@ -1,6 +1,8 @@
 @use '../utils/mixins' as *;
 
 .gesamte-keyfacts {
+  font-family: 'Lora', sans-serif;
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -48,12 +50,11 @@
     padding: 40px 20px;
     max-width: 1290px;
     width: 100%;
-    gap: 65px;
 
     @include media(md) {
       flex-direction: column;
       padding: 16px 12px;
-      gap: 49px;
+      gap: 0;
     }
   }
 
@@ -61,6 +62,59 @@
     max-width: 306px;
     width: 100%;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &:not(:last-child)::after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 64px;
+      background-color: #b9a185;
+    }
+
+    &:not(:first-child) {
+      padding-left: 32px;
+    }
+
+    &:not(:last-child) {
+      padding-right: 32px;
+    }
+
+    @media (max-width: 768px) {
+      gap: 8px;
+      width: 100%;
+      max-width: 100%;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #b9a185;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &:not(:first-child) {
+        padding-left: 0;
+      }
+
+      &:not(:last-child) {
+        padding-right: 0;
+      }
+
+      &:not(:first-child) {
+        padding-top: 24px;
+      }
+
+      &:not(:last-child) {
+        padding-bottom: 24px;
+      }
+    }
   }
 
   &__li-title {
@@ -69,12 +123,13 @@
     color: #d9c1a7;
   }
   &__li-desc {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 24px;
     line-height: 133%;
 
     @include media(md) {
       font-size: 20px;
+      font-weight: 400;
     }
   }
 }
