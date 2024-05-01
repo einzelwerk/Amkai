@@ -1,5 +1,11 @@
 @use '../utils/mixins' as *;
 
+.amkai-club-grid__heading {
+  @include media(md) {
+    text-align: left !important;
+  }
+}
+
 .amkai-club-grid {
   width: 100%;
 

@@ -173,14 +173,14 @@ img {
     }
   }
 
-  &:hover {
-    color: #fff;
-    background-color: var(--gold-color);
+  // &:hover {
+  //   color: #fff;
+  //   background-color: var(--gold-color);
 
-    svg path {
-      stroke: #fff;
-    }
-  }
+  //   svg path {
+  //     stroke: #fff;
+  //   }
+  // }
 }
 
 .tab-content {
