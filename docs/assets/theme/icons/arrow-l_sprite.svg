@@ -1,8 +1,0 @@
-export default {
-      id: "arrow-l_sprite-usage",
-      viewBox: "0 0 30 12",
-      url: __webpack_public_path__ + "C:\\Users\\terya\\OneDrive\\Desktop\\frontend\\Amkai\\src\\assets\\theme\\icons\\arrow-l_sprite.svg",
-      toString: function () {
-        return this.url;
-      }
-    }
