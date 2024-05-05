@@ -1,8 +1,0 @@
-export default {
-      id: "question_sprite-usage",
-      viewBox: "0 0 16 17",
-      url: __webpack_public_path__ + "D:\\Проекты\\Amkai\\src\\assets\\theme\\icons\\question_sprite.svg",
-      toString: function () {
-        return this.url;
-      }
-    }

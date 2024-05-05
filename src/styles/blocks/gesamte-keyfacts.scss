@@ -48,18 +48,21 @@
     background-color: #9b8164;
     border-radius: 24px;
     padding: 40px 20px;
-    max-width: 1290px;
     width: 100%;
 
     @include media(md) {
       flex-direction: column;
       padding: 16px 12px;
       gap: 0;
+      border-radius: 12px;
     }
+
+    @media (min-width: 1140px) {
+      padding: 40px 120px;
+    }    
   }
 
   &__li {
-    max-width: 306px;
     width: 100%;
     position: relative;
     display: flex;
