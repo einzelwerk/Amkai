@@ -1,7 +1,7 @@
 export default {
       id: "facts-star_sprite-usage",
       viewBox: "0 0 36 36",
-      url: __webpack_public_path__ + "D:\\Проекты\\Amkai\\src\\assets\\theme\\icons\\facts-star_sprite.svg",
+      url: __webpack_public_path__ + "C:\\Users\\terya\\OneDrive\\Desktop\\frontend\\Amkai\\src\\assets\\theme\\icons\\facts-star_sprite.svg",
       toString: function () {
         return this.url;
       }
