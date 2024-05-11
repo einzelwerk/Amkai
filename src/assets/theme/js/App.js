@@ -14,3 +14,4 @@ import './Fancybox';
 import './ReelsVideoPlayer';
 import './HeroVideoPlayer';
 import './TabsContent';
+import './AboutPlayVideo';
