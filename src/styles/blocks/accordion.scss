@@ -3,6 +3,8 @@
 .accordion {
   $this: &;
 
+  font-family: "Lora", sans-serif;
+
   &__heading {
     @include media(md) {
       padding: 24px 0;

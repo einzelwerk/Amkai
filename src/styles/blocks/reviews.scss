@@ -1,6 +1,7 @@
 @use '../utils/mixins' as *;
 
 .reviews {
+  font-family: "Lora", sans-serif;
   overflow: visible;
 
   &__item {

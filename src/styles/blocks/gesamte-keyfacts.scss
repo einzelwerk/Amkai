@@ -58,8 +58,12 @@
     }
 
     @media (min-width: 1140px) {
-      padding: 40px 120px;
+      padding: 40px 80px;
     }    
+
+    @media(min-width: 1290px) {
+      padding: 40px 120px;
+    }
   }
 
   &__li {

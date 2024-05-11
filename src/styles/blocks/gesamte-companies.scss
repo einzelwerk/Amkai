@@ -1,6 +1,8 @@
 @use '../utils/mixins' as *;
 
 .gesamte-companies {
+  font-family: "Lora", sans-serif;
+
   &__container {
     display: flex;
     flex-direction: column;

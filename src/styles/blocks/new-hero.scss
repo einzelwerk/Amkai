@@ -3,6 +3,11 @@
 .new-section-hero {
   position: relative;
   min-height: 100vh;
+
+  @include media(md) {
+    height: 600px;
+    min-height: 600px;
+  }
 }
 
 .new-hero {
@@ -27,11 +32,11 @@
     z-index: 10;
 
     @include media(md) {
-        right: auto;
-        bottom: auto;
-        left: 50%;
-        top: 50%;
-        transform: translateX(-50%) translateY(-50%);
+      right: auto;
+      bottom: auto;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
     }
 
     &--play {
@@ -126,7 +131,7 @@
   bottom: 32px;
   left: 50%;
   transform: translateX(-50%);
-  font-family: "Lora", sans-serif;
+  font-family: 'Lora', sans-serif;
 
   &__suptitle {
     font-size: 40px;
@@ -139,10 +144,10 @@
   }
 
   &__title {
-    @media(max-width: 800px) {
-      font-size: rem(80px)
+    @media (max-width: 800px) {
+      font-size: rem(80px);
     }
-    
+
     @include media(md) {
       font-size: rem(40px);
       font-weight: 400;

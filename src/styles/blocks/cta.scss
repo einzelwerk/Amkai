@@ -1,6 +1,8 @@
 @use '../utils/mixins' as *;
 
 .cta {
+  font-family: "Lora", sans-serif;
+
   @include media(lg) {
     padding: 60px var(--gap);
   }
