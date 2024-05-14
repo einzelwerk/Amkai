@@ -37,6 +37,10 @@ body {
   }
 }
 
+body .gallery-grid__image img {
+  height: 100% !important;
+}
+
 .oh {
   overflow: hidden;
 }
