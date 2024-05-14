@@ -6,13 +6,13 @@
   .location-event__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 410px;
+    grid-auto-rows: minmax(min-content, 530px);
     gap: 30px;
     overflow: hidden;
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
-      grid-auto-rows: 310px;
+      grid-auto-rows: minmax(min-content, 310px);
     }
 
     .location-event__item {
