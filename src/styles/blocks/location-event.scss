@@ -6,10 +6,12 @@
   .location-event__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 410px;
     gap: 30px;
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
+      grid-auto-rows: 310px;
     }
 
     .location-event__item {
@@ -17,11 +19,7 @@
       width: 100%;
       font-family: 'Lora', sans-serif;
 
-      min-height: 307px;
-
-      &:last-child {
-        max-height: 410px;
-      }
+      height: 100%;
 
       &.with-content {
         display: flex;
