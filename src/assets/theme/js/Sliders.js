@@ -129,16 +129,41 @@ class Sliders {
 
   static about() {
     const root = document.querySelector('.about__videos-slider');
-    const sliderInstance = new Swiper(root, {
-      init: false, 
-      slidesPerView: 2.2,
-      spaceBetween: 16,
-      loop: true,
-      slidesOffsetBefore: 16,
-      slidesOffsetAfter: 16
-    });
+    let sliderInstance;
 
-    sliderInstance.init();
+    const initSlider = () => {
+      sliderInstance = new Swiper(root, {
+        init: false,
+        slidesPerView: 2.2,
+        spaceBetween: 16,
+        slidesOffsetBefore: 16,
+        slidesOffsetAfter: 16,
+        loop: true,
+      });
+
+      sliderInstance.init();
+    };
+
+    const destroySlider = () => {
+      if (sliderInstance && sliderInstance.destroy) {
+        sliderInstance.destroy(true, true);
+        sliderInstance = null;
+      }
+    };
+
+    const handleResize = () => {
+      if (window.innerWidth < 1024) {
+        if (!sliderInstance) {
+          initSlider();
+        }
+      } else {
+        destroySlider();
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
   }
 }
 

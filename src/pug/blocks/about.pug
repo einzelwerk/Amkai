@@ -12,14 +12,41 @@ section.section.about
                         p Service 
                             span  5
                         p Ambiente
-                            span  5
+                            span 5
                     a.google-link(href="#")   
                         img(src=require('@/images/icons/google.svg') alt='google')
                         img(src=require('@/images/icons/next.svg') alt='go')
 
                 .about__videos 
                     h4.about__videos-text So wird es bei uns gefeiert
-                        
+
+                    .about__videos-slider.swiper 
+                        .swiper-wrapper 
+                             .swiper-slide 
+                                 .about__videos-item 
+                                     img.about__videos-item-img(src=require('@/images/video-img.jpg') alt='video-img')
+                                     .about__videos-item--hover 
+                                         img(src=require('@/images/icons/play-2.svg') alt='play' data-video="https://amkai.hamburg/assets/userfiles/videos/amkai-teaser.mp4")
+                                         p Video ansehen
+                             .swiper-slide
+                                 .about__videos-item 
+                                     img.about__videos-item-img(src=require('@/images/video-img.jpg') alt='video-img')
+                                     .about__videos-item--hover 
+                                         img(src=require('@/images/icons/play-2.svg') alt='play' data-video="https://amkai.hamburg/assets/userfiles/videos/amkai-teaser.mp4")
+                                         p Video ansehen
+                             .swiper-slide
+                                 .about__videos-item 
+                                     img.about__videos-item-img(src=require('@/images/video-img.jpg') alt='video-img')
+                                     .about__videos-item--hover 
+                                         img(src=require('@/images/icons/play-2.svg') alt='play' data-video="https://amkai.hamburg/assets/userfiles/videos/amkai-teaser.mp4")
+                                         p Video ansehen
+                             .swiper-slide
+                                 .about__videos-item 
+                                     img.about__videos-item-img(src=require('@/images/video-img.jpg') alt='video-img')
+                                     .about__videos-item--hover 
+                                         img(src=require('@/images/icons/play-2.svg') alt='play' data-video="https://amkai.hamburg/assets/userfiles/videos/amkai-teaser.mp4")
+                                         p Video ansehen
+
             .about-right
                 img.about-right-quote(src=require('@/images/quote.svg') alt='quote')
                 video(src="" poster=require('@/images/video-img.jpg') id="bigVideo") 
